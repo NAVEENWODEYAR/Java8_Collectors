@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Stream;
 
 /**
  *@author Naveen K Wodeyar,
@@ -35,6 +34,5 @@ public class StringOccurances {
     
     public static void main(String[] args) {
 	stringOccurrence("Welcome to Java programming,Java is secure & strong","Java");
-	strOccurrences("Belive in yourself,", "faith");
     }
 }
