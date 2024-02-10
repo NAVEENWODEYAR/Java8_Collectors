@@ -8,10 +8,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 public class Employee {
+
     private int empId;
-    private int empAge;
     private String empName;
-    private double empSalary;
+    private int empAge;
     private String empGender;
+    private String empDepartment;
     private int DOJ;
+    private double empSalary;
 }
