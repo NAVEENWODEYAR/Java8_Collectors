@@ -35,5 +35,6 @@ public class StringOccurances {
     
     public static void main(String[] args) {
 	stringOccurrence("Welcome to Java programming,Java is secure & strong","Java");
+	strOccurrences("Belive in yourself,", "faith");
     }
 }
