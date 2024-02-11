@@ -118,11 +118,20 @@ Query 1 : How many male and female employees are there in the organization?
 	Map<String, List<Employee>> collect = employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpDepartment));
 	System.out.println(collect);
 	
-*/
+
 //Query 13 : What is the average salary and total salary of the whole organization?
 	System.out.println("\n Salary Summary of the organization,");
 	DoubleSummaryStatistics sal = employeeList.parallelStream().collect(Collectors.summarizingDouble(Employee::getEmpSalary));
 	System.out.println("\n Total sum salary of the organization: "+sal.getSum());
+	System.out.println("\n Average salary of the organization: "+sal.getAverage());
+	System.out.println("\n Minimum  salary of the organization: "+sal.getMin());
+	System.out.println("\n Maximum  salary of the organization: "+sal.getMax());
+	
+*/
+//Query 3.14 : Separate the employees who are younger or equal to 25 years from those employees who are older than 25 years.
+	System.out.println("\n ");
+	Map<Boolean, List<Employee>> partition = employeeList.stream().collect(Collectors.partitioningBy(emp->emp.getEmpAge() >= 25));
+	System.out.println(partition);
    }
 }
    
