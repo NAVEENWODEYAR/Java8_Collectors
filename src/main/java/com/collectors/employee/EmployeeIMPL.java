@@ -80,13 +80,20 @@ Query 1 : How many male and female employees are there in the organization?
 			.collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.averagingDouble(Employee::getEmpSalary)))
 			.entrySet()
 			.forEach(System.out::println);
-*/
+
 //Query 8 : Get the details of youngest male employee in the product development department?
 	System.out.println("\n Youngest male employee");
-	min = employeeList.parallelStream()
-		.filter((emp->emp.getEmpGender().equalsIgnoreCase("Male") && emp.getEmpDepartment().equalsIgnoreCase("Product Development"))).min(Comparator.comparing(Employee::getEmpAge));
-
-
+	Employee employee = employeeList.parallelStream()
+		.filter((emp->emp.getEmpGender().equalsIgnoreCase("Male") && emp.getEmpDepartment().equalsIgnoreCase("Product Development")))
+		.min(Comparator.comparing(Employee::getEmpAge))
+		.get();
+	System.out.println(" Name "+employee.getEmpName()+" aged "+employee.getEmpAge());
+	
+*/
+//Query 9 : Who has the most working experience in the organization?
+	System.out.println("\n Youngest male employee");
+	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge))).get();
+	System.out.println(" " +employee.getEmpName()+" "+employee.getEmpAge());
 
 
    }
