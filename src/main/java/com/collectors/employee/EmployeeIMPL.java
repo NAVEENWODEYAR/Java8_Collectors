@@ -137,7 +137,8 @@ Query 1 : How many male and female employees are there in the organization?
 //Query 15 : Who is the oldest employee in the organization? What is his age and which department he belongs to?
 	System.out.println("\n Seniormost employee details");
 	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge))).get();
-	System.out.println(employee.getEmpAge());
+	Employee employee2 = employeeList.stream().max(Comparator.comparing(Employee::getEmpAge)).get();
+	System.out.println(employee.getEmpAge()+" "+employee2.getEmpName());
 	}
 }
    
