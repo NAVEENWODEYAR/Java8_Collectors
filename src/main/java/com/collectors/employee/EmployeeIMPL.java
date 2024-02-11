@@ -1,6 +1,7 @@
 package com.collectors.employee;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -42,12 +43,17 @@ Query 1 : How many male and female employees are there in the organization?
 		.map(Employee::getEmpDepartment)
 		.distinct()
 		.forEach(System.out::println);
-*/
+
 //Query 3 : What is the average age of male and female employees?
 	System.out.println("\n Average age");
 	Map<String, Double> avgAge = employeeList.stream()
 					.collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingDouble(Employee::getEmpAge)));
 	System.out.println(avgAge);
+ */
+// Query 4 : Get the details of highest paid employee in the organization?
+	System.out.println("\n Highest Salary");
+	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpSalary))).get();
+	System.out.println("Employee "+employee.getEmpName()+" \n Salary "+employee.getEmpSalary());
    }
 }
    
