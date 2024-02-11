@@ -92,8 +92,8 @@ Query 1 : How many male and female employees are there in the organization?
 */
 //Query 9 : Who has the most working experience in the organization?
 	System.out.println("\n Youngest male employee");
-	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge))).get();
-	System.out.println(" " +employee.getEmpName()+" "+employee.getEmpAge());
+	Employee employee = employeeList.parallelStream().collect(Collectors.minBy(Comparator.comparing(Employee::getDOJ))).get();
+	System.out.println(" " +employee.getEmpName()+" "+employee.getDOJ());
 
 
    }
