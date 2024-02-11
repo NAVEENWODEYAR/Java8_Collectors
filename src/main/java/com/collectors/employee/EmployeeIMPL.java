@@ -95,7 +95,7 @@ Query 1 : How many male and female employees are there in the organization?
 	Employee employee = employeeList.parallelStream().collect(Collectors.minBy(Comparator.comparing(Employee::getDOJ))).get();
 	System.out.println(" " +employee.getEmpName()+" "+employee.getDOJ());
 
-*/
+
 //Query 10 : How many male and female employees are there in the sales and marketing team?
 	System.out.println("\n Employees count in Sales & Marketing");
 	employeeList.parallelStream()
@@ -103,6 +103,21 @@ Query 1 : How many male and female employees are there in the organization?
 			.collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.counting()))
 			.entrySet()
 			.forEach(System.out::println);
+
+//Query 11 : What is the average salary of male and female employees?
+	System.out.println("\n Average salary of Male & Female employees,");
+	employeeList.stream()
+		.collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingDouble(Employee::getEmpSalary)))
+		.entrySet()
+		.forEach(System.out::println);
+		
+*/
+//Query 3.12 : List down the names of all employees in each department?
+	System.out.println("\n Departmentwise List");
+	Map<String, List<Employee>> collect = employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpDepartment));
+	System.out.println(collect);
+
+
 
 
    }
