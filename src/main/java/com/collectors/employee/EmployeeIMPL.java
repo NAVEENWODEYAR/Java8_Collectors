@@ -2,6 +2,7 @@ package com.collectors.employee;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class EmployeeIMPL {
@@ -29,14 +30,24 @@ employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Develop
 
 /** 
 Query 1 : How many male and female employees are there in the organization?
-	employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.counting())).entrySet().forEach(System.out::println);
-*/
+	System.out.println("\n Gender count");
+	employeeList.parallelStream()
+		.collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.counting()))
+		.entrySet()
+		.forEach(System.out::println);
 
-//Query 3.2 : Print the name of all departments in the organization?
+//Query 2 : Print the name of all departments in the organization?
+ * 	System.out.println("\n Departments");
 	employeeList.stream()
 		.map(Employee::getEmpDepartment)
 		.distinct()
 		.forEach(System.out::println);
+*/
+//Query 3 : What is the average age of male and female employees?
+	System.out.println("\n Average age");
+	Map<String, Double> avgAge = employeeList.stream()
+					.collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingDouble(Employee::getEmpAge)));
+	System.out.println(avgAge);
    }
 }
    
