@@ -56,13 +56,20 @@ Query 1 : How many male and female employees are there in the organization?
 	System.out.println("\n Highest Salary");
 	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpSalary))).get();
 	System.out.println(" Employee "+employee.getEmpName()+" \n Salary "+employee.getEmpSalary());
-*/
 
 //	Query 3.5 : Get the names of all employees who have joined after 2015?
 	employeeList.parallelStream()
 		.filter(emp-> emp.getDOJ() > 2015)
 		.map(emp->emp.getEmpName())
 		.forEach(System.out::println);
+*/
+//Query 3.6 : Count the number of employees in each department?
+	employeeList.parallelStream()
+			.collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.counting()))
+			.entrySet()
+			.forEach(System.out::println);
+
+
    }
 }
    
