@@ -2,6 +2,7 @@ package com.collectors.employee;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -111,15 +112,17 @@ Query 1 : How many male and female employees are there in the organization?
 		.entrySet()
 		.forEach(System.out::println);
 		
-*/
-//Query 3.12 : List down the names of all employees in each department?
+		
+//Query 12 : List down the names of all employees in each department?
 	System.out.println("\n Departmentwise List");
 	Map<String, List<Employee>> collect = employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpDepartment));
 	System.out.println(collect);
-
-
-
-
+	
+*/
+//Query 13 : What is the average salary and total salary of the whole organization?
+	System.out.println("\n Salary Summary of the organization,");
+	DoubleSummaryStatistics sal = employeeList.parallelStream().collect(Collectors.summarizingDouble(Employee::getEmpSalary));
+	System.out.println("\n Total sum salary of the organization: "+sal.getSum());
    }
 }
    
