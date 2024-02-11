@@ -53,21 +53,33 @@ Query 1 : How many male and female employees are there in the organization?
 	System.out.println(avgAge);
  
 // Query 4 : Get the details of highest paid employee in the organization?
-	System.out.println("\n Highest Salary");
+	System.out.println("\n Highest salary");
 	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpSalary))).get();
 	System.out.println(" Employee "+employee.getEmpName()+" \n Salary "+employee.getEmpSalary());
 
 //	Query 3.5 : Get the names of all employees who have joined after 2015?
+ * 	System.out.println("\n Employees joined after 2015");
 	employeeList.parallelStream()
 		.filter(emp-> emp.getDOJ() > 2015)
 		.map(emp->emp.getEmpName())
 		.forEach(System.out::println);
-*/
+
 //Query 3.6 : Count the number of employees in each department?
+ * 	System.out.println("\n Emp count in Dept");
 	employeeList.parallelStream()
 			.collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.counting()))
 			.entrySet()
 			.forEach(System.out::println);
+*/
+
+//Query 3.7 : What is the average salary of each department?
+	System.out.println("\n Average salary of Dept's");
+	employeeList.parallelStream()
+			.collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.averagingDouble(Employee::getEmpSalary)))
+			.entrySet()
+			.forEach(System.out::println);
+
+
 
 
    }
