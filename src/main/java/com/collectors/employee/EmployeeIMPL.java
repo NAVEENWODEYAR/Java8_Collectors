@@ -28,6 +28,8 @@ employeeList.add(new Employee(244, "Nicolus Den", 24, "Male", "Sales And Marketi
 employeeList.add(new Employee(255, "Ali Baig", 23, "Male", "Infrastructure", 2018, 12700.0));
 employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
 employeeList.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
+employeeList.add(new Employee(27, "Nandi", 20, "Female", "Product Development", 2024, 135700.0));
+
 
 /** 
 Query 1 : How many male and female employees are there in the organization?
@@ -49,11 +51,18 @@ Query 1 : How many male and female employees are there in the organization?
 	Map<String, Double> avgAge = employeeList.stream()
 					.collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingDouble(Employee::getEmpAge)));
 	System.out.println(avgAge);
- */
+ 
 // Query 4 : Get the details of highest paid employee in the organization?
 	System.out.println("\n Highest Salary");
 	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpSalary))).get();
-	System.out.println("Employee "+employee.getEmpName()+" \n Salary "+employee.getEmpSalary());
+	System.out.println(" Employee "+employee.getEmpName()+" \n Salary "+employee.getEmpSalary());
+*/
+
+//	Query 3.5 : Get the names of all employees who have joined after 2015?
+	employeeList.parallelStream()
+		.filter(emp-> emp.getDOJ() > 2015)
+		.map(emp->emp.getEmpName())
+		.forEach(System.out::println);
    }
 }
    
