@@ -127,11 +127,17 @@ Query 1 : How many male and female employees are there in the organization?
 	System.out.println("\n Minimum  salary of the organization: "+sal.getMin());
 	System.out.println("\n Maximum  salary of the organization: "+sal.getMax());
 	
-*/
-//Query 3.14 : Separate the employees who are younger or equal to 25 years from those employees who are older than 25 years.
-	System.out.println("\n ");
+
+//Query 14 : Separate the employees who are younger or equal to 25 years from those employees who are older than 25 years.
+	System.out.println("\n Collectors.partitioningBy(function)");
 	Map<Boolean, List<Employee>> partition = employeeList.stream().collect(Collectors.partitioningBy(emp->emp.getEmpAge() >= 25));
 	System.out.println(partition);
-   }
+
+*/
+//Query 15 : Who is the oldest employee in the organization? What is his age and which department he belongs to?
+	System.out.println("\n Seniormost employee details");
+	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge))).get();
+	System.out.println(employee.getEmpAge());
+	}
 }
    
