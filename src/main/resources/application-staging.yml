@@ -3,6 +3,6 @@ server:
   port: 65434
 spring:
   application:
-    name: CollectorsQueries
+    name: RealTimeQueries
   main:
     banner-mode: off
