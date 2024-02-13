@@ -1,11 +1,9 @@
 package com.collectors.employee;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 import java.util.Comparator;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -34,6 +32,7 @@ employeeList.add(new Employee(255, "Ali Baig", 23, "Male", "Infrastructure", 201
 employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
 employeeList.add(new Employee(277, "Anuj Chettiar", 39, "Male", "Product Development", 2012, 5700.0));
 employeeList.add(new Employee(27, "Nandi", 20, "Female", "Product Development", 2024, 135700.0));
+employeeList.add(new Employee(181, "Parvat", 40, "Male", "Sales And Transport", 2024, 185700.0));
 
 
 /** 
@@ -139,8 +138,7 @@ Query 1 : How many male and female employees are there in the organization?
 	System.out.println("\n Seniormost employee details");
 	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge))).get();
 	Employee employee2 = employeeList.stream().max(Comparator.comparing(Employee::getEmpAge)).get();
-	employeeList.parallelStream().collect(Collections.sort(null);)
-	System.out.println(employee.getEmpAge()+" "+employee2.getEmpName());
+	System.out.println(employee.getEmpAge()+"*SENIOR EMPLOYEE*"+employee2.getEmpName());
 	}
 }
    
