@@ -1,6 +1,7 @@
 package com.collectors.employee;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.DoubleSummaryStatistics;
 import java.util.List;
@@ -138,6 +139,7 @@ Query 1 : How many male and female employees are there in the organization?
 	System.out.println("\n Seniormost employee details");
 	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge))).get();
 	Employee employee2 = employeeList.stream().max(Comparator.comparing(Employee::getEmpAge)).get();
+	employeeList.parallelStream().collect(Collections.sort(null);)
 	System.out.println(employee.getEmpAge()+" "+employee2.getEmpName());
 	}
 }
