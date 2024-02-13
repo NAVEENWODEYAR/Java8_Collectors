@@ -1,6 +1,7 @@
 package com.collectors.methods;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,6 +21,10 @@ public class CollectorsMethods {
 	//2. Creating specific collection: toCollection(),
 	LinkedList<Integer> collect = numList.stream().map(n->n*n).collect(Collectors.toCollection(LinkedList::new));
 	System.out.println(collect);
+	
+	//3.Finding minimum value: minBy(),
+	Integer min = numList.stream().min(Comparator.comparing(Integer::intValue)).get();
+	System.out.println(min);
     }
 
 }
