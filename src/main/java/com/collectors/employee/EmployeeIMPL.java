@@ -9,8 +9,6 @@ import java.util.stream.Collectors;
 
 public class EmployeeIMPL {
 
-   private static Optional<Employee> min;
-
 public static void main(String[] args) {
        List<Employee> employeeList = new ArrayList<>();
        
