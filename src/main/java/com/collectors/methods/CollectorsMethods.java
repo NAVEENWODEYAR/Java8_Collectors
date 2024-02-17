@@ -31,6 +31,10 @@ public class CollectorsMethods {
 	//4. Averaging int: averagingInt(),
 	Double avg = numList.parallelStream().collect(Collectors.averagingDouble(Integer::intValue));
 	System.out.println(avg);
+	
+	//5.Finding maximum value: maxBy(),
+	Integer max = numList.parallelStream().max(Comparator.comparing(Integer::intValue)).get();
+	System.out.println(max);
     }
 
 }
