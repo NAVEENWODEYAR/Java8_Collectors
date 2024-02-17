@@ -26,10 +26,9 @@ public class CollectorsMethods {
 	System.out.println("\n Minimun value in the list,");
 	Integer min = numList.stream().min(Comparator.comparing(Integer::intValue)).get();
 	Integer min1 = numList.parallelStream().collect(Collectors.minBy(Comparator.naturalOrder())).get();
-	Integer min2 = numList.parallelStream().collect(Collectors.maxBy(Comparator.reverseOrder())).get();
-	System.out.println(min+" "+min1+" "+min2);
+	System.out.println(min+" "+min1);
 	
-	//4. Averaging int: averagingInt(),
+	//4. Averaging integer value: averagingInt(),
 	System.out.println("\n Average value in the list,");
 	Double avg = numList.parallelStream().collect(Collectors.averagingDouble(Integer::intValue));
 	System.out.println(avg);
