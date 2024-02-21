@@ -33,7 +33,7 @@ public class CollectorsMethods {
 	Double avg = numList.parallelStream().collect(Collectors.averagingDouble(Integer::intValue));
 	System.out.println(avg);
 	
-	//5.Finding maximum value: maxBy(),
+	//5.Finding maximum value in the collection: maxBy(),
 	System.out.println("\n Maximum value in the list,");
 	Integer max = numList.parallelStream().max(Comparator.comparing(Integer::intValue)).get();
 	Integer max1 = numList.stream().collect(Collectors.maxBy(Comparator.naturalOrder())).get();
