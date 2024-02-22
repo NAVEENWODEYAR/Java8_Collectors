@@ -40,8 +40,8 @@ public class CollectorsMethods {
 	System.out.println(max+" "+max1);
 	
 	//6.UnModifiable list,
-	List<Integer> unModifiablelst = numList.stream().collect(Collectors.toUnmodifiableList());
-	System.out.println(unModifiablelst);
+	List<Integer> unModifiablelst = numList.stream().filter(n->n>2).collect(Collectors.toUnmodifiableList());
+	unModifiablelst.add(55);
     }
 
 }
