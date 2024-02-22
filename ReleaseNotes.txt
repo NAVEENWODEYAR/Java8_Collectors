@@ -1,4 +1,4 @@
-Project Name:
+Project Name: Collectors-Methods-Hands-On
 Start Date:
 Release Date:
-Version:
+Version:1.0
