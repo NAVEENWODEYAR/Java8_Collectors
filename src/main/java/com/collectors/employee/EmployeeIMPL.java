@@ -12,10 +12,10 @@ public class EmployeeIMPL {
 public static void main(String[] args) {
        List<Employee> employeeList = new ArrayList<>();
        
-employeeList.add(new Employee(111, "Jiya Brein", 32, "Female", "HR", 2011, 25000.0));
+employeeList.add(new Employee(111, "James Bond", 32, "Male", "HR", 2011, 25000.0));
 employeeList.add(new Employee(122, "Paul Niksui", 25, "Male", "Sales And Marketing", 2015, 13500.0));
 employeeList.add(new Employee(133, "Martin Theron", 29, "Male", "Infrastructure", 2012, 18000.0));
-employeeList.add(new Employee(144, "Murali Gowda", 28, "Male", "Product Development", 2014, 32500.0));
+employeeList.add(new Employee(144, "Murali", 28, "Male", "Product Development", 2014, 32500.0));
 employeeList.add(new Employee(155, "Nima Roy", 27, "Female", "HR", 2013, 22700.0));
 employeeList.add(new Employee(166, "Iqbal Hussain", 43, "Male", "Security And Transport", 2016, 10500.0));
 employeeList.add(new Employee(177, "Manu Sharma", 35, "Male", "Account And Finance", 2010, 27000.0));
@@ -134,7 +134,7 @@ Query 1 : How many male and female employees are there in the organization?
 
 */
 //Query 15 : Who is the oldest employee in the organization? What is his age and which department he belongs to?
-	System.out.println("\n Seniormost employee details");
+	System.out.println("\n SeniorMost employee details");
 	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge))).get();
 	Employee employee2 = employeeList.stream().max(Comparator.comparing(Employee::getEmpAge)).get();
 	System.out.println(employee.getEmpAge()+"*SENIOR EMPLOYEE*"+employee2.getEmpName());
