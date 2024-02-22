@@ -38,6 +38,10 @@ public class CollectorsMethods {
 	Integer max = numList.parallelStream().max(Comparator.comparing(Integer::intValue)).get();
 	Integer max1 = numList.stream().collect(Collectors.maxBy(Comparator.naturalOrder())).get();
 	System.out.println(max+" "+max1);
+	
+	//6.UnModifiable list,
+	List<Integer> unModifiablelst = numList.stream().collect(Collectors.toUnmodifiableList());
+	System.out.println(unModifiablelst);
     }
 
 }
