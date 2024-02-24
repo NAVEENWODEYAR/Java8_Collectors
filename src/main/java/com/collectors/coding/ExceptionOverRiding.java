@@ -1,0 +1,25 @@
+package com.collectors.coding;
+
+import javax.management.RuntimeErrorException;
+
+// Parent class with NullPointerException,
+class Parent{
+	public void test() throws NullPointerException{
+	    System.out.println("Parent Class");
+	    throw new NullPointerException("NullPtrExcptn in Parent class");
+	}
+}
+class Child extends Parent{
+    @Override
+    public void test() throws RuntimeException{
+	System.out.println("Child class");
+	throw new RuntimeErrorException(null, "RunTimeException in Child class");
+    }
+}
+public class ExceptionOverRiding extends Parent{
+
+    public static void main(String[] args) {
+	new Child().test();
+    }
+   
+}
