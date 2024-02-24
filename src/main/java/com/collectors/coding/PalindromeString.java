@@ -17,7 +17,7 @@ public class PalindromeString {
 		return false;
 	    }
 	    left++;
-	    right++;
+	    right--;
 	}
 	return true;
     }
