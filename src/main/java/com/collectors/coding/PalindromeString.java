@@ -1,6 +1,8 @@
 
 package com.collectors.coding;
 
+import java.util.Scanner;
+
 public class PalindromeString {
 
     private static boolean palindrome;
@@ -21,9 +23,9 @@ public class PalindromeString {
     }
     
     public static void main(String[] args) {
-	System.out.println("Palindrome String");
-	palindrome = isPalindrome("level");
-	if(palindrome)
+	Scanner sc = new Scanner(System.in);
+	String st = sc.next();
+	if(isPalindrome(st))
 	    System.out.println("Palindrome");
 	else
 	    System.out.println("Not an Palindrome");
