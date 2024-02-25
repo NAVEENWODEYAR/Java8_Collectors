@@ -1,6 +1,6 @@
 
 server:
-  port: 65434
+  port: 65534
 spring:
   application:
     name: RealTimeQueries
