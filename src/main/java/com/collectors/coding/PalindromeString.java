@@ -5,9 +5,7 @@ public class PalindromeString {
 
     private static boolean palindrome;
 
-    /**
-     * Palindrome using length,
-     */
+     // Palindrome using length,
     static boolean isPalindrome(String st) {
 	st.toLowerCase();
 	int left = 0;
