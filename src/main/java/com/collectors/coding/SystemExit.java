@@ -6,7 +6,7 @@ public class SystemExit {
 	System.out.println("System.exit()");
 	int a=0;int b=0;
 	try {
-	    System.out.println(a+b);
+	    System.out.println(Math.round(a+b));
 	    System.exit(0);
 	} catch (Exception e) {
 	    System.out.println(e.getStackTrace());
