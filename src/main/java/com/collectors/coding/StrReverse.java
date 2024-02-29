@@ -16,7 +16,7 @@ public class StrReverse {
 	return rev;
     }
     public static void main(String[] args) {
-	System.out.println("String Reverse");
+	System.out.println("\nString Reverse");
 	System.out.println(stringReverse("System"));
     }
 }
