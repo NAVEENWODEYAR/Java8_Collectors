@@ -41,7 +41,7 @@ public class CollectorsMethods {
 	
 	//6.UnModifiable list,
 	List<Integer> unModifiablelst = numList.stream().filter(n->n>2).collect(Collectors.toUnmodifiableList());
-	//ava.lang.UnsupportedOperationException(ImmutableCollections),
+	//UnsupportedOperationException(ImmutableCollections),
 	unModifiablelst.add(55);
 	unModifiablelst.remove(1);
     }
