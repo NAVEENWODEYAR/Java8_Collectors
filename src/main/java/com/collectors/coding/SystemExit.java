@@ -13,7 +13,7 @@ public class SystemExit {
 	    // JVM will terminate here, finally block won't execute,
 	    System.exit(0);
 	}finally {
-	    System.out.println("Finally block,");
+	    System.out.println("Inside Finally block,");
 	}
     }
 

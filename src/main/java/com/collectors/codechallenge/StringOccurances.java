@@ -8,15 +8,14 @@ import java.util.List;
 
 /**
  *@author Naveen K Wodeyar,
- *@date 10-02-2024 
+ *@date 10-02-2024
  */
 public class StringOccurances {
 
-//    find the number of occurrences of an word in an String, using for loop,
+    //find the number of occurrences of an word in an String, using for loop,
     static void stringOccurrence(String st,String s) {
 	String str[] = st.toLowerCase().split(" ");
 	int count=0;
-//	System.out.println(Arrays.toString(str));
 	for(int i=0; i<str.length; i++) {
 	    if(str[i].equalsIgnoreCase(s))
 		count = count+1;
@@ -26,9 +25,9 @@ public class StringOccurances {
 	System.out.println("String "+st+" occurs,"+count+" times");
     }
     
-//    using Collections,
+    // using Collections,
     static int strOccurrences(String st,String s) {
-	List<String> wordsList = new ArrayList(Arrays.asList(st.toLowerCase().split(" ")));
+	List<String> wordsList = new ArrayList<String>(Arrays.asList(st.toLowerCase().split(" ")));
 	return Collections.frequency(wordsList, s);
     }
     
