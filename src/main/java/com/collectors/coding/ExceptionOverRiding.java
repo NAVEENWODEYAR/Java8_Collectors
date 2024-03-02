@@ -6,7 +6,7 @@ import javax.management.RuntimeErrorException;
 class Parent{
 	public void test() throws NullPointerException{
 	    System.out.println("Parent Class");
-	    throw new NullPointerException("NullPtrExcptn in Parent class");
+	    throw new NullPointerException("NullPointerException in Parent class");
 	}
 }
 class Child extends Parent{
@@ -20,6 +20,5 @@ public class ExceptionOverRiding extends Parent{
 
     public static void main(String[] args) {
 	new Child().test();
-    }
-   
+    }  
 }
