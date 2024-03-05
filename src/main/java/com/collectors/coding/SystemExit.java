@@ -16,7 +16,7 @@ public class SystemExit {
 	}
     }
     
-    static void roundOfSum() {
+    static void roudOfSum() {
 	int a=2;float b=1.8f;
 	try {
 	    System.out.println(Math.round(a+b));
@@ -31,6 +31,6 @@ public class SystemExit {
 
     public static void main(String[] args) {
 	roundOf();
-	roundOfSum();
+	roudOfSum();
     }
 }
