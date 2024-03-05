@@ -2,8 +2,7 @@ package com.collectors.coding;
 
 public class SystemExit {
 
-    public static void main(String[] args) {
-	System.out.println("System.exit()");
+    static void roundOf() {
 	int a=0;int b=0;
 	try {
 	    System.out.println(Math.round(a+b));
@@ -15,6 +14,10 @@ public class SystemExit {
 	}finally {
 	    System.out.println("Inside Finally block,");
 	}
+    }
+
+    public static void main(String[] args) {
+
     }
 
 }
