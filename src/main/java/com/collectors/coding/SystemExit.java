@@ -15,9 +15,22 @@ public class SystemExit {
 	    System.out.println("Inside Finally block,");
 	}
     }
-
-    public static void main(String[] args) {
-
+    
+    static void roundOfSum() {
+	int a=2;float b=1.8f;
+	try {
+	    System.out.println(Math.round(a+b));
+	} catch (Exception e) {
+	    System.out.println(Math.ceil(a-b));
+	    System.exit(0);
+	}
+	finally {
+	    System.out.println("Inside finally block,");
+	}
     }
 
+    public static void main(String[] args) {
+	roundOf();
+	roundOfSum();
+    }
 }
