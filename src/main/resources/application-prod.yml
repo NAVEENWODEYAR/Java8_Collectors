@@ -1,8 +1,0 @@
-
-server:
-  port: 65434
-spring:
-  application:
-    name: RealTimeQueries
-  main:
-    banner-mode: off
