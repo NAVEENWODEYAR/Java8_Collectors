@@ -1,0 +1,8 @@
+
+server:
+  port: 65534
+spring:
+  application:
+    name: RealTimeQueries
+  main:
+    banner-mode: console
