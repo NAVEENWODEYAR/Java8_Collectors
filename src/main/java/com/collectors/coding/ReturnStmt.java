@@ -6,6 +6,7 @@ public class ReturnStmt {
 	System.out.println("return in try and catch block,");
 	try {
 	    System.out.println("inside try block");
+	    System.exit(0);
 	    return a-b;
 	} catch (Exception e) {
 	    System.out.println(e.getMessage());
