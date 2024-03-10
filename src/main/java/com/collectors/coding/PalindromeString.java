@@ -4,9 +4,6 @@ package com.collectors.coding;
 import java.util.Scanner;
 
 public class PalindromeString {
-
-    private static boolean palindrome;
-
      // Palindrome using length,
     static boolean isPalindrome(String st) {
 	st.toLowerCase();
