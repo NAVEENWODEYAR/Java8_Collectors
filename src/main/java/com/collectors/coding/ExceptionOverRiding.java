@@ -5,14 +5,14 @@ import javax.management.RuntimeErrorException;
 class Parent{
 	public void test() throws NullPointerException{
 	    System.out.println("Parent Class");
-	    throw new NullPointerException("NullPointerException in Parent class");
+	    throw new NullPointerException("NullPointerException in Parent class,");
 	}
 }
 class Child extends Parent{
     @Override
     public void test() throws RuntimeException{
 	System.out.println("Child class");
-	throw new RuntimeErrorException(new Child(), "RunTimeException in Child class");
+	throw new RuntimeException("RuntimeException,");
     }
 }
 public class ExceptionOverRiding extends Parent{
