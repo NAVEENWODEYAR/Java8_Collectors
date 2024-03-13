@@ -1,7 +1,6 @@
 package com.collectors.coding;
 
 import javax.management.RuntimeErrorException;
-
 // Parent class with NullPointerException,
 class Parent{
 	public void test() throws NullPointerException{
@@ -13,7 +12,7 @@ class Child extends Parent{
     @Override
     public void test() throws RuntimeException{
 	System.out.println("Child class");
-	throw new RuntimeErrorException(null, "RunTimeException in Child class");
+	throw new RuntimeErrorException(new Child(), "RunTimeException in Child class");
     }
 }
 public class ExceptionOverRiding extends Parent{
