@@ -1,6 +1,5 @@
 package com.collectors.coding;
 
-import javax.management.RuntimeErrorException;
 // Parent class with NullPointerException,
 class Parent{
 	public void test() throws NullPointerException{
