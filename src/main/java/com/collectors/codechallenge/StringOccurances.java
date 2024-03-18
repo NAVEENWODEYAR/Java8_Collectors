@@ -25,7 +25,7 @@ public class StringOccurances {
 	System.out.println("String "+st+" occurs,"+count+" times");
     }
     
-    // using Collections,
+    // using Collections to find frequency in an string,
     static int strOccurrences(String st,String s) {
 	List<String> wordsList = new ArrayList<String>(Arrays.asList(st.toLowerCase().split(" ")));
 	return Collections.frequency(wordsList, s);
