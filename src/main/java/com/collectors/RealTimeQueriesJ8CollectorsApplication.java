@@ -10,5 +10,4 @@ public class RealTimeQueriesJ8CollectorsApplication {
 		SpringApplication.run(RealTimeQueriesJ8CollectorsApplication.class, args);
 		System.out.println(Thread.currentThread());
 	}
-
 }

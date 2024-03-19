@@ -3,14 +3,14 @@ package com.collectors.coding;
 // Parent class with NullPointerException,
 class Parent{
 	public void test() throws NullPointerException{
-	    System.out.println("Parent Class test()");
+	    System.out.println("Parent Class");
 	    throw new NullPointerException("NullPointerException in Parent class,");
 	}
 }
 class Child extends Parent{
     @Override
     public void test() throws RuntimeException{
-	System.out.println("Child class test()");
+	System.out.println("Child class");
 	throw new RuntimeException("RuntimeException,");
     }
 }
