@@ -1,17 +1,13 @@
 
 package com.collectors.codechallenge;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 /**
  *@author Naveen K Wodeyar,
  *@date 10-02-2024
  */
 public class StringOccurances {
-
     //find the number of occurrences of an word in an String, using for loop,
     static void stringOccurrence(String st,String s) {
 	String str[] = st.toLowerCase().split(" ");
