@@ -8,6 +8,6 @@ public class RealTimeQueriesJ8CollectorsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RealTimeQueriesJ8CollectorsApplication.class, args);
-		System.out.println(Thread.currentThread());
+		System.out.println(Thread.currentThread().getName());
 	}
 }
