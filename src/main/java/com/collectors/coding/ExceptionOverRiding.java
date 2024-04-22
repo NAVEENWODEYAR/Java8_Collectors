@@ -7,6 +7,7 @@ class Parent{
 	    throw new NullPointerException("NullPointerException in Parent class,");
 	}
 }
+// child class with RunTimeException,
 class Child extends Parent{
     @Override
     public void test() throws RuntimeException{
