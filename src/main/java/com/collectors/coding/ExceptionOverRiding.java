@@ -12,7 +12,7 @@ class Child extends Parent{
     @Override
     public void test() throws RuntimeException{
 	System.out.println("Child class");
-	throw new RuntimeException("RuntimeException,");
+	throw new RuntimeException("RuntimeException in Child class,");
     }
 }
 public class ExceptionOverRiding extends Parent{
