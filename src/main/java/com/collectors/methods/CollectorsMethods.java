@@ -25,7 +25,7 @@ public class CollectorsMethods {
 	//3.Finding minimum value: minBy(),
 	System.out.println("\n Minimun value in the list,");
 		Integer min = numList.stream().min(Comparator.comparing(Integer::intValue)).get();
-		Integer min1 = numList.parallelStream().collect(Collectors.minBy(Comparator.naturalOrder())).get();
+		Integer min1 = numList.parallelStream().collect(Collectors.minBy(Comparator.naturalOrder())).orElseThrow();
 		System.out.println(min+" "+min1);
 	
 	//4. Averaging integer value: averagingInt(),
