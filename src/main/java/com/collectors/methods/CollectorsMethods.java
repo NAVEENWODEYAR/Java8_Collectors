@@ -36,7 +36,7 @@ public class CollectorsMethods {
 	//5.Finding maximum value in the collection: maxBy(),
 	System.out.println("\n Maximum value in the list,");
 		Integer max = numList.parallelStream().max(Comparator.comparing(Integer::intValue)).get();
-		Integer max1 = numList.stream().collect(Collectors.maxBy(Comparator.naturalOrder())).get();
+		Integer max1 = numList.stream().collect(Collectors.maxBy(Comparator.naturalOrder())).orElse(max);
 		System.out.println(max+" "+max1);
 	
 	//6.UnModifiable list,
