@@ -4,5 +4,8 @@ server:
 spring:
   application:
     name: RealTimeQueries
+springdoc:
+  api-docs:
+    path: /collectors
   main:
     banner-mode: console
