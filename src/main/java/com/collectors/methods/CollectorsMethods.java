@@ -16,7 +16,7 @@ public class CollectorsMethods {
 	
 	//1. Creating list: toList(),
 	List<Integer> numList = Arrays.asList(1,2,3,4,5,6,7,8,9,0);
-			numList.parallelStream().map(n->n+1).collect(Collectors.toList()).forEach(System.out::print);
+			numList.stream().map(n->n+1).collect(Collectors.toList()).forEach(System.out::print);
     
 	//2. Creating specific collection: toCollection(),
 	LinkedList<Integer> collect = numList.stream().map(n->n*n).collect(Collectors.toCollection(LinkedList::new));
