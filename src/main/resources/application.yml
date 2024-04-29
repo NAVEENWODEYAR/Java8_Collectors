@@ -2,3 +2,5 @@
 spring:
   profiles:
     active: prod
+  main:
+    banner-mode: console

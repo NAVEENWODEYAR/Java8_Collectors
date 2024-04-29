@@ -7,5 +7,4 @@ spring:
 springdoc:
   api-docs:
     path: /collectors
-  main:
-    banner-mode: console
+ 
