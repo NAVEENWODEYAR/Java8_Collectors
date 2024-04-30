@@ -79,7 +79,7 @@ employeeList.add(new Employee(181, "Parvat", 40, "Male", "Sales And Transport", 
 
 //Query 8 : Get the details of youngest male employee in the product development department?
 	System.out.println("\n Youngest male employee");
-	Employee employee = employeeList.parallelStream()
+	Employee employe = employeeList.parallelStream()
 		.filter((emp->emp.getEmpGender().equalsIgnoreCase("Male") && emp.getEmpDepartment().equalsIgnoreCase("Product Development")))
 		.min(Comparator.comparing(Employee::getEmpAge))
 		.get();
@@ -88,7 +88,7 @@ employeeList.add(new Employee(181, "Parvat", 40, "Male", "Sales And Transport", 
 
 //Query 9 : Who has the most working experience in the organization?
 	System.out.println("\n Youngest male employee");
-	Employee employee = employeeList.parallelStream().collect(Collectors.minBy(Comparator.comparing(Employee::getDOJ))).get();
+	Employee employe1 = employeeList.parallelStream().collect(Collectors.minBy(Comparator.comparing(Employee::getDOJ))).get();
 	System.out.println(" " +employee.getEmpName()+" "+employee.getDOJ());
 
 
