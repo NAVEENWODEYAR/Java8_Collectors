@@ -24,19 +24,14 @@ employeeList.add(new Employee(188, "Wang Liu", 31, "Male", "Product Development"
 employeeList.add(new Employee(199, "Amelia Zoe", 24, "Female", "Sales And Marketing", 2016, 11500.0));
 employeeList.add(new Employee(200, "Jaden Dough", 38, "Male", "Security And Transport", 2015, 11000.5));
 employeeList.add(new Employee(211, "Jasna Kaur", 27, "Female", "Infrastructure", 2014, 15700.0));
-employeeList.add(new Employee(222, "Nitin Joshi", 25, "Male", "Product Development", 2016, 28200.0));
-employeeList.add(new Employee(233, "Jyothi Reddy", 27, "Female", "Account And Finance", 2013, 21300.0));
-employeeList.add(new Employee(244, "Nicolus Den", 24, "Male", "Sales And Marketing", 2017, 10700.5));
-employeeList.add(new Employee(255, "Ali Baig", 23, "Male", "Infrastructure", 2018, 12700.0));
-employeeList.add(new Employee(155, "Bella", 33, "Female", "Infrastructure", 2008, 10700.0));
 employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
 employeeList.add(new Employee(277, "Anuj Chettiar", 39, "Male", "Product Development", 2012, 5700.0));
 employeeList.add(new Employee(27, "Nandi", 20, "Female", "Product Development", 2024, 135700.0));
 employeeList.add(new Employee(181, "Parvat", 40, "Male", "Sales And Transport", 2024, 185700.0));
 
 
-/** 
-Query 1 : How many male and female employees are there in the organization?
+
+//Query 1 : How many male and female employees are there in the organization?
 	System.out.println("\n Gender count");
 	employeeList.parallelStream()
 		.collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.counting()))
@@ -44,7 +39,7 @@ Query 1 : How many male and female employees are there in the organization?
 		.forEach(System.out::println);
 
 //Query 2 : Print the name of all departments in the organization?
- * 	System.out.println("\n Departments");
+  	System.out.println("\n Departments");
 	employeeList.stream()
 		.map(Employee::getEmpDepartment)
 		.distinct()
@@ -62,14 +57,14 @@ Query 1 : How many male and female employees are there in the organization?
 	System.out.println(" Employee "+employee.getEmpName()+" \n Salary "+employee.getEmpSalary());
 
 //Query 5 : Get the names of all employees who have joined after 2015?
- * 	System.out.println("\n Employees joined after 2015");
+  	System.out.println("\n Employees joined after 2015");
 	employeeList.parallelStream()
 		.filter(emp-> emp.getDOJ() > 2015)
 		.map(emp->emp.getEmpName())
 		.forEach(System.out::println);
 
 //Query 6 : Count the number of employees in each department?
- * 	System.out.println("\n Emp count in Dept");
+  	System.out.println("\n Emp count in Dept");
 	employeeList.parallelStream()
 			.collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.counting()))
 			.entrySet()
@@ -133,12 +128,11 @@ Query 1 : How many male and female employees are there in the organization?
 	Map<Boolean, List<Employee>> partition = employeeList.stream().collect(Collectors.partitioningBy(emp->emp.getEmpAge() >= 25));
 	System.out.println(partition);
 
-*/
 //Query 15 : Who is the oldest employee in the organization? What is his age and which department he belongs to?
 	System.out.println("\n SeniorMost employee details");
-	Employee employee = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge))).get();
+	Employee employee1 = employeeList.parallelStream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge))).get();
 	Employee employee2 = employeeList.stream().max(Comparator.comparing(Employee::getEmpAge)).get();
-	System.out.println(employee.getEmpAge()+"*SENIOR EMPLOYEE*"+employee2.getEmpName());
+	System.out.println(employee1.getEmpAge()+"*SENIOR EMPLOYEE*"+employee2.getEmpName());
 	}
 }
    
