@@ -1,7 +1,7 @@
 
 package com.collectors.coding;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class PalindromeString {
      // Palindrome using length,

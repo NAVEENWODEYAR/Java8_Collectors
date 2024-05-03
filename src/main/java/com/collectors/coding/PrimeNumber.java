@@ -14,8 +14,8 @@ public class PrimeNumber {
     
     public static void main(String[] args) {
 	if(isPrime(9))
-	    System.out.println("Prime");
-	else
+	    System.out.println("Prime number,");
+	else 
 	    System.out.println("Not prime,");
     }
 }
