@@ -2,7 +2,6 @@ package com.collectors.coding;
 
 public class PrimeNumber {
 
-    // method to check if a given number is prime,
     static boolean isPrime(int n) {
 	if(n<=1)
 	    return false;
