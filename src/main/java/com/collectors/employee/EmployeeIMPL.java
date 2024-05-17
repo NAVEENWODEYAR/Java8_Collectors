@@ -1,10 +1,7 @@
 package com.collectors.employee;
 
 import java.util.*;
-import java.util.Comparator;
 import java.util.DoubleSummaryStatistics;
-import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class EmployeeIMPL {
@@ -26,6 +23,7 @@ employeeList.add(new Employee(200, "Jaden Dough", 38, "Male", "Security And Tran
 employeeList.add(new Employee(211, "Jasna Kaur", 27, "Female", "Infrastructure", 2014, 15700.0));
 employeeList.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
 employeeList.add(new Employee(277, "Anuj Chettiar", 39, "Male", "Product Development", 2012, 5700.0));
+employeeList.add(new Employee(27, "Nandi", 20, "Female", "Product Development", 2024, 135701.0));
 employeeList.add(new Employee(27, "Nandi", 20, "Female", "Product Development", 2024, 135700.0));
 employeeList.add(new Employee(181, "Parvat", 40, "Male", "Sales And Transport", 2024, 185700.0));
 
