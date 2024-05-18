@@ -2,7 +2,7 @@ package com.collectors.employee;
 
 import java.util.*;
 import java.util.Map.Entry;
-import java.util.stream.Collectors;
+import java.util.stream.*;
 
 /**
  * @author Naveen K Wodeyar
@@ -36,7 +36,10 @@ public class EmployeeManagement {
 		// EMPLOYEE MANAGEMET SYSTEM,
 		System.out.println("\n Gender count, " + employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getEmpGender, Collectors.counting())));
 
+		System.out.println("Department list\n " + employeeList.stream().map(Employee::getEmpDepartment).distinct().collect(Collectors.joining(",\n")));
 		
-	
+		System.out.println("Average age\n " + employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingLong(Employee::getEmpAge))).entrySet().parallelStream().collect(Collectors.toMap(Entry::getKey, e->String.format("%.2f", e.getValue()))));
+		
+		System.out.println("Highest paid Employee " +employeeList.stream().collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getEmpSalary))));
 	}
 }
