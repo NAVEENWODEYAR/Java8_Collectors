@@ -16,7 +16,6 @@ public class EmployeeManagement {
 						employeeList.add(new Employee(111, "Jiya Brein", 32, "Female", "HR", 2011, 25000.0));
 						employeeList.add(new Employee(122, "Paul Niksui", 25, "Male", "Sales And Marketing", 2015, 13500.0));
 						employeeList.add(new Employee(133, "Martin Theron", 29, "Male", "Infrastructure", 2012, 18000.0));
-						employeeList.add(new Employee(144, "Murali Gowda", 28, "Male", "Product Development", 2014, 32500.0));
 						employeeList.add(new Employee(155, "Nima Roy", 27, "Female", "HR", 2013, 22700.0));
 						employeeList.add(new Employee(166, "Iqbal Hussain", 43, "Male", "Security And Transport", 2016, 10500.0));
 						employeeList.add(new Employee(177, "Manu Sharma", 35, "Male", "Account And Finance", 2010, 27000.0));
@@ -34,12 +33,18 @@ public class EmployeeManagement {
 						employeeList.add(new Employee(2791, "Anu Mathew", 31, "Female", "Testing", 2020, 85700.0));
 						
 		// EMPLOYEE MANAGEMET SYSTEM,
-		System.out.println("\n Gender count, " + employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getEmpGender, Collectors.counting())));
+		System.out.println("\nGender count, " + employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getEmpGender, Collectors.counting())));
 
-		System.out.println("Department list\n " + employeeList.stream().map(Employee::getEmpDepartment).distinct().collect(Collectors.joining(",\n")));
+		System.out.println("\nDepartment list\n " + employeeList.stream().map(Employee::getEmpDepartment).distinct().collect(Collectors.joining(",\n")));
 		
-		System.out.println("Average age\n " + employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingLong(Employee::getEmpAge))).entrySet().parallelStream().collect(Collectors.toMap(Entry::getKey, e->String.format("%.2f", e.getValue()))));
+		System.out.println("\nAverage age\n " + employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingLong(Employee::getEmpAge))).entrySet().parallelStream().collect(Collectors.toMap(Entry::getKey, e->String.format("%.2f", e.getValue()))));
 		
-		System.out.println("Highest paid Employee " +employeeList.stream().collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getEmpSalary))));
+		System.out.println("\nHighest paid Employee\n " +employeeList.stream().collect(Collectors.maxBy(Comparator.comparingDouble(Employee::getEmpSalary))));
+	
+		System.out.println("\nEmployees joined after 2015\n "+employeeList.stream().filter(emp-> emp.getDOJ() > 2015).map(Employee::getEmpName).toList());
+	
+		System.out.println("\nEmployee count"+employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.counting())));
+	
+		System.out.println("\nAverage Salary \n"+employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.averagingDouble(Employee::getEmpSalary))).entrySet().stream().collect(Collectors.toMap(Entry::getKey,e->String.format("%.2f",e.getValue()))));
 	}
 }
