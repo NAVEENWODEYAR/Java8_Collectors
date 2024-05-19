@@ -13,7 +13,7 @@ public class EmployeeManagement {
 	
 	public static void main(String[] args) {
 	ArrayList<Employee> employeeList = new ArrayList<>(5);
-						employeeList.add(new Employee(111, "Jiya Brein", 32, "Female", "HR", 2011, 25000.0));
+						employeeList.add(new Employee(111, "Jiya Brein", 32, "Female", "HR", 2001, 25000.0));
 						employeeList.add(new Employee(122, "Paul Niksui", 25, "Male", "Sales And Marketing", 2015, 13500.0));
 						employeeList.add(new Employee(133, "Martin Theron", 29, "Male", "Infrastructure", 2012, 18000.0));
 						employeeList.add(new Employee(155, "Nima Roy", 27, "Female", "HR", 2013, 22700.0));
@@ -46,5 +46,13 @@ public class EmployeeManagement {
 		System.out.println("\nEmployee count"+employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.counting())));
 	
 		System.out.println("\nAverage Salary \n"+employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.averagingDouble(Employee::getEmpSalary))).entrySet().stream().collect(Collectors.toMap(Entry::getKey,e->String.format("%.2f",e.getValue()))));
+	
+		System.out.println("\nYoungest Female Product Development\n"+employeeList.stream().filter(emp-> emp.getEmpGender().equalsIgnoreCase("Female")||emp.getEmpDepartment().equalsIgnoreCase("Product Development")).min(Comparator.comparing(Employee::getEmpAge)));
+	
+		System.out.println("\nSeniorMost Employee\n"+employeeList.parallelStream().sorted(Comparator.comparing(Employee::getDOJ)).findFirst());
+	
+		System.out.println("\nSales & Marketing Team\n"+employeeList.parallelStream().filter(emp->emp.getEmpDepartment().equalsIgnoreCase("Sales And Marketing")).collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.counting())));
+		
+		System.out.println("\nAverage Salary\n"+employeeList.parallelStream().collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingDouble(Employee::getEmpSalary))).entrySet().stream().collect(Collectors.toMap(Entry::getKey,emp->String.format("%.3f",emp.getValue()))));
 	}
 }

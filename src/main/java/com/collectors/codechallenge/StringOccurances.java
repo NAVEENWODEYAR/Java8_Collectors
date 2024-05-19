@@ -27,6 +27,12 @@ public class StringOccurances {
     	return Collections.frequency(wordsList, s);
     }
     
+    static void strOccurrence17(String st,String s) {
+    	long count = Arrays.stream(st.toLowerCase().split("\\s")).filter(word->word.equals(s)).count();
+    	System.out.println("Word "+s+" occurred "+count+" times!");
+    	strOccurrence17("String", "s");
+    }
+    
     public static void main(String[] args) {
     	stringOccurrence("Welcome to Java programming,Java is secure & strong","Java");
     }

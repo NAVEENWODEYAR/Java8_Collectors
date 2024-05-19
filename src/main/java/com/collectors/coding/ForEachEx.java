@@ -7,10 +7,10 @@ public class ForEachEx {
 	
 	for (String st : names) {
 	    System.out.println(st+":"+st.toLowerCase());
-	}
+		forEachLoop(); 
+		}
     }
-    
     public static void main(String[] args) {
-	forEachLoop(); 
+    	System.out.println("\n\n");
     }
 }
