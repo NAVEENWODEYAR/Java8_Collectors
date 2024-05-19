@@ -30,11 +30,10 @@ public class StringOccurances {
     static void strOccurrence17(String st,String s) {
     	long count = Arrays.stream(st.toLowerCase().split("\\s")).filter(word->word.equals(s)).count();
     	System.out.println("\nWord "+s+" occurred "+count+" times!\n");
-    	strOccurrence17("String", "s");
     }
     
     public static void main(String[] args) {
     	stringOccurrence("Welcome to Java programming,Java is secure & strong","Java");
-    	strOccurrence17("String", "s");
+    	strOccurrence17("This is a test. This test is simple. This is only a test", "test");
     }
 }
