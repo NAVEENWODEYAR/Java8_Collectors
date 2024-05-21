@@ -1,8 +1,6 @@
 package com.collectors.coding;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Naveen K Wodeyar
@@ -18,6 +16,8 @@ public class ArrLstVsLnkLst {
 						intList.add(3);
 						intList.add(2);
 						intList.add(4);
+		System.out.println(intList);
+		lnkLst();
 	}
 	
 	static void lnkLst() {
@@ -27,10 +27,13 @@ public class ArrLstVsLnkLst {
 						intList.add(3);
 						intList.add(2);
 						intList.add(4);
+		System.out.println("\n"+intList+"\n");
+		arrLst();
+
 	}
 	
 	public static void main(String[] args) {
-		
+		arrLst();
 	}
 
 }
