@@ -8,7 +8,6 @@ public class ForEachEx {
 	for (String st : names) {
 	    System.out.println(st+":"+st.toLowerCase());
 		forEachLoop(); 
-		int length = names.length;
 		}
     }
     public static void main(String[] args) {
