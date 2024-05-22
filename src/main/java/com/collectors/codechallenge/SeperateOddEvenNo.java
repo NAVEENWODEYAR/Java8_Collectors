@@ -1,9 +1,7 @@
 
 package com.collectors.codechallenge;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -13,12 +11,12 @@ import java.util.stream.Collectors;
  */
 public class SeperateOddEvenNo {
 	
-	static void oddEvenExtractor(List<Integer> list) {
+	static void oddEvenExtractor(List<Integer> listOfIntegers) {
+		listOfIntegers.stream().collect(Collectors.partitioningBy(i -> i % 2 == 0))
+        .forEach((isEven, numbers) -> System.out.printf("--------------%n%s Numbers%n--------------%n%s", isEven ? "Even" : "Odd", numbers.stream().map(String::valueOf).collect(Collectors.joining(System.lineSeparator()))));
 		
-		List<Integer> collect = list.stream().filter(n->n/2 ==0).collect(Collectors.toList());
-		System.out.println(collect);
-		
-		
+		System.out.println("\n\n");
+		listOfIntegers.parallelStream().collect(Collectors.partitioningBy(n -> n%2 ==0)).entrySet().forEach(System.out::println);
 	}
 
 	public static void main(String[] args) {
