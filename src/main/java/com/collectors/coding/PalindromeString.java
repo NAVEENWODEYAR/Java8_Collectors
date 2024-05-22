@@ -21,8 +21,8 @@ public class PalindromeString {
 	}
 	
 	static Boolean isPalindromeString(String st) {
+		isPalindrome(st);
 		return IntStream.range(0, st.length()/2).allMatch(s->Character.toLowerCase(st.charAt(s)) == Character.toLowerCase(st.charAt(st.length()-s-1)));
-
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
