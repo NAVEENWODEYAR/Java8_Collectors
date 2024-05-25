@@ -18,10 +18,14 @@ public class SeperateOddEvenNo {
 		System.out.println("\n\n");
 		listOfIntegers.parallelStream().collect(Collectors.partitioningBy(n -> n%2 ==0)).entrySet().forEach(System.out::println);
 	}
+	
+	static void nthLargestNumber(List<Integer> list) {
+		Integer _2ndLargestNo = list.parallelStream().sorted(Comparator.reverseOrder()).skip(1).findFirst().orElseGet(()->0);
+		System.out.println(_2ndLargestNo);
+	}
 
 	public static void main(String[] args) {
-		List<Integer> asList = Arrays.asList(1,2,3,4,5,6,7,8);
-		
-		oddEvenExtractor(asList);
+		List<Integer> asList = Arrays.asList(1,2,9,3,4,5,6,7,8);
+		nthLargestNumber(asList);
 	}
 }
