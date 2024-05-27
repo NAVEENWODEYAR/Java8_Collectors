@@ -20,6 +20,10 @@ public class PalindromeString {
 		return true;
 	}
 	
+	static Boolean isPalindromeStr(String st) {
+		return IntStream.range(0, st.length()/2).noneMatch(s->st.charAt(s) != st.charAt(st.length()-1));
+	}
+
 	static Boolean isPalindromeString(String st) {
 		isPalindrome(st);
 		return IntStream.range(0, st.length()/2).allMatch(s->Character.toLowerCase(st.charAt(s)) == Character.toLowerCase(st.charAt(st.length()-s-1)));
