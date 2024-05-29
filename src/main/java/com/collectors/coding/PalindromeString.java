@@ -30,14 +30,17 @@ public class PalindromeString {
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("\nEnter an string:");
-		String st = sc.next();
-		if (isPalindrome(st))
-			System.out.println("Palindrome");
-		else
-			System.out.println("Not an Palindrome");
+		try{
+			System.out.println("\nEnter an string:");
+			String st = sc.next();
+			if (isPalindrome(st))
+				System.out.println("Palindrome");
+			else
+				System.out.println("Not an Palindrome");
+		}catch (Exception e) {
+			e.getCause();
+		}finally {
+			sc.close();
+		}
 	}
-	
-	
-
 }
