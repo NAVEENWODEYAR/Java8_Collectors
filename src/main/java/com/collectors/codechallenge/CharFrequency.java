@@ -14,12 +14,15 @@ public class CharFrequency {
 
 	static void charFrequency() {
         String str = "Java Concept Of The Day";
-        		str.chars().mapToObj(c->(char)c).filter(c->c !=' ').collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().forEach(System.out::println);
+        		str.chars().mapToObj(c->(char)c).filter(c->c !=' ').collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().forEach(System.out::print);
+		elementFrequency();
 	}
 	
 	static void elementFrequency() {
         List<String> strList = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Stapler", "Note Book", "Pencil");
-        strList.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().forEach(System.out::println);
+        strList.stream()
+        .filter(st -> st.trim().length() > 0 && st.chars().anyMatch(Character::isLetterOrDigit))
+        .collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().forEach(System.out::println);
 	}
 	
 	public static void main(String[] args) {
