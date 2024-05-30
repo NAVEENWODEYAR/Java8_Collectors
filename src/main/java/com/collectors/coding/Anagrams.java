@@ -1,7 +1,7 @@
 
 package com.collectors.coding;
 
-import java.util.Arrays;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -14,14 +14,12 @@ import java.util.stream.Stream;
 public class Anagrams {
 
 	 static void anagramTest() {
-	    String s1 = "RaceCar";
+	    String s1 = "RaceCarq";
 	    String s2 = "CarRace";
 
-	    System.out.println(Stream.of(s1, s2)
-	        .map(s -> Stream.of(s.split("")).map(String::toUpperCase).sorted().collect(Collectors.joining()))
-	        .distinct()
-	        .count() == 1 ? "Two strings are anagrams" : "Two strings are not anagrams");
-	}
+	    boolean equals = Stream.of(s1.toUpperCase().split("")).sorted().collect(Collectors.joining()).equals(Stream.of(s2.toUpperCase().split("")).sorted().collect(Collectors.joining()));
+	    System.out.println(equals?"Anagrams":"Not anagrams");
+	 }
 
 	
 	public static void main(String[] args) {
