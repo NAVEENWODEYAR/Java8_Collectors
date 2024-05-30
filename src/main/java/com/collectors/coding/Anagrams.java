@@ -1,6 +1,7 @@
 
 package com.collectors.coding;
 
+import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -12,7 +13,7 @@ import java.util.stream.Stream;
  *
  */
 public class Anagrams {
-	 static String s1 = "RaceCarq";
+	 static String s1 = "RaceCar";
     static String s2 = "CarRace";
     
 	 static void anagramTest() {
@@ -23,7 +24,13 @@ public class Anagrams {
 	 }
 	 
 	 static Boolean anagramTest1() {
+		 anagramTest2();
 		return s1.length() == s2.length() && s1.chars().map(Character::toLowerCase).sorted().toArray().equals(s2.chars().sorted().toArray());
+	 }
+	 
+	 static Boolean anagramTest2() {
+		 
+		 return Arrays.equals(Stream.of(s1.toUpperCase()).sorted().toArray(),Stream.of(s2.toUpperCase()).sorted().toArray());
 	 }
 
 	
