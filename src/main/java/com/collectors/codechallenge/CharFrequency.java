@@ -19,7 +19,7 @@ public class CharFrequency {
 	}
 	
 	static void elementFrequency() {
-        List<String> strList = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Stapler", "Note Book", "Pencil");
+        List<String> strList = Arrays.asList("Pen", "Eraser", "Note Book", "Pen", "Pencil", "Stapler", "Note Book", "Pencil","  ","4525234","121 34fsf  ,");
         strList.stream()
         .filter(st -> st.trim().length() > 0 && st.chars().anyMatch(Character::isLetterOrDigit))
         .collect(Collectors.groupingBy(Function.identity(),Collectors.counting())).entrySet().forEach(System.out::println);
