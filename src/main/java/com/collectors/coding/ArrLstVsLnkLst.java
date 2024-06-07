@@ -28,7 +28,6 @@ public class ArrLstVsLnkLst {
 						intList.add(2);
 						intList.add(4);
 		System.out.println("\n"+intList+"\n");
-		arrLst();
 
 	}
 	
