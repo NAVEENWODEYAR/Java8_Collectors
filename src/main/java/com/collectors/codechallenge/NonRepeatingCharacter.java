@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
  * @apiNote find the firstNonRepeating character in string,
  *
  */
-public class NonRepeaatingCharacter {
+public class NonRepeatingCharacter {
 
 	static Character nonRepeatingChar(String st) {
 		return st.chars()
