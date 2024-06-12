@@ -1,8 +1,7 @@
 
 package com.collectors.hashmap;
 
-import java.util.HashMap;
-import java.util.TreeMap;
+import java.util.*;
 
 /**
  * @author Naveen K Wodeyar,
@@ -17,6 +16,7 @@ public class HashMpCls {
 		hashMap.put("2",2);
 		hashMap.put(new Object(), new TreeMap<>());
 		
+		System.out.println(hashMap.size());
 		hashMap.entrySet().forEach(System.out::println);
 		
 	}
