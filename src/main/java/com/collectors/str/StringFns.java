@@ -11,7 +11,7 @@ import java.util.stream.IntStream;
  *
  */
 public class StringFns {
-	static String st = new String("India");
+	static String st = new String("bnml");
 	
 	static void strRev() {
 //		 st.chars().mapToObj(c->(char)c).sorted(Comparator.reverseOrder()).forEach(System.out::print);
@@ -27,8 +27,14 @@ public class StringFns {
 		 System.out.println(sb.reverse());
 	}
 	
+	static boolean vowelCheck(String st) {
+		return st.toLowerCase().matches(".*[aeiou].*");
+	}
 	public static void main(String[] args) {
-		strRev();
+//		strRev();
+		System.out.println(vowelCheck(st)?"Vowel present":"Not present");
+		
+		
 	}
 
 }
