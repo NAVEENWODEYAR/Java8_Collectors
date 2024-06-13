@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
  *How do you remove duplicate elements from a list using Java 8 streams?
  */
 public class RemoveDuplicates {
-	
 	// convert to Set<>
 	static void removeDuplicatesInList(List<Integer> list,List<String> strList) {
 		Set<Integer> set = list.stream().collect(Collectors.toSet());
