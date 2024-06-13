@@ -30,9 +30,21 @@ public class StringFns {
 	static boolean vowelCheck(String st) {
 		return st.toLowerCase().matches(".*[aeiou].*");
 	}
+	
+	static void removeSpace() {
+		String st = " ab cd ";
+		System.out.println(st+" - "+st.trim()+" - "+st.strip());
+		
+		String s = "  abc  def\t";
+		
+		s = s.strip();
+				
+		System.out.println(s);
+	}
 	public static void main(String[] args) {
 //		strRev();
 		System.out.println(vowelCheck(st)?"Vowel present":"Not present");
+		removeSpace();
 		
 		
 	}
