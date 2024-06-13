@@ -12,8 +12,12 @@ import java.util.stream.Stream;
 public class StrmFunctions {
 
 	static Stream<Integer> st = Stream.of(1,2,3,4,5,6,7,8);
+	
 	static void intermediateFns() {
-		st.forEach(System.out::print);
+//		st.forEach(System.out::print);
+		
+		//Performs an additional action on each element of a stream. This method is only to support debugging
+		st.peek(Integer::doubleValue).forEach(System.out::println);
 	}
 	
 	static void terminalFns() {
