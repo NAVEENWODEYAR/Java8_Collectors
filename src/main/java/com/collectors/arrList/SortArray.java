@@ -18,8 +18,19 @@ public class SortArray {
 		System.out.println(Arrays.toString(arr));
 	}
 	
+	static void sortArrayUsingLoop(int[] intArray) {
+		int[] sortedArray = {};
+		for(int i=0; i<=intArray.length-1; i++) {
+			if(intArray[i] < intArray[i]-1) {
+				sortedArray = intArray;
+			}
+		}
+		System.out.println(Arrays.toString(sortedArray));
+	}
+	
 	public static void main(String[] args) {
 		sortArray();
+		sortArrayUsingLoop(arr);
 	}
 
 }
