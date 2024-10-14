@@ -11,7 +11,7 @@ import java.util.Arrays;
  */
 public class SortArray {
 
-	static int[] arr = {1,3,2,6,5,4,9};
+	static int[] arr = {1,3,2,6,5,4,9,8};
 	
 	static void sortArray() {
 		Arrays.sort(arr);
@@ -25,7 +25,8 @@ public class SortArray {
 				sortedArray = intArray;
 			}
 		}
-		System.out.println(Arrays.toString(sortedArray));
+	System.out.println("####$$$$");	System.out.println(Arrays.toString(sortedArray));
+System.out.println("####$$$$");
 	}
 	
 	public static void main(String[] args) {
