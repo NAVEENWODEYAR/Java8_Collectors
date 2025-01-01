@@ -8,12 +8,9 @@ import lombok.extern.slf4j.Slf4j;
 
 @SpringBootApplication
 @OpenAPIDefinition
-@Slf4j
 public class RealTimeQueriesJ8CollectorsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RealTimeQueriesJ8CollectorsApplication.class, args);
-		log.error("@OpenAPIDefination");
-		log.debug("debug log");
 	}
 }
