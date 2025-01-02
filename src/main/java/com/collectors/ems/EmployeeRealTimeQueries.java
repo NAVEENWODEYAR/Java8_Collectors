@@ -57,9 +57,22 @@ public class EmployeeRealTimeQueries {
 		Optional<Employee> highestPaidEmployee = employeeList.stream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpSalary)));
 		System.out.println(highestPaidEmployee.get());
 		
+	  	System.out.println("\n Employees joined after 2015");
+	  	List<Employee> employeeAfter2015 = employeeList.stream().filter(e->e.getDOJ() > 2015).collect(Collectors.toList());
+		System.out.println(employeeAfter2015);
 		
+		System.out.println("**##/nEmployee Count ##**/n");
+		Map<String, Long> empCount = employeeAfter2015.stream().collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.counting()));
+		System.out.println(empCount);
 		
-
+		System.out.println("##**/nAverage Salary of Department##**/n");
+		Map<String, Double> deptAvgSal = employeeAfter2015.stream().collect(Collectors.groupingBy(Employee::getEmpDepartment,Collectors.averagingDouble(Employee::getEmpSalary)));
+		System.out.println(deptAvgSal);
+		
+		System.out.println("**##/nJunior Male Employee##**/n");
+		Optional<Employee> juniorEmployee = employeeList.stream().filter(e->e.getEmpDepartment().equalsIgnoreCase("Product Development") && e.getEmpGender().equalsIgnoreCase("Male")).collect(Collectors.minBy(Comparator.comparing(Employee::getEmpAge)));
+		System.out.println(juniorEmployee);
+		
 	}
 }
 
