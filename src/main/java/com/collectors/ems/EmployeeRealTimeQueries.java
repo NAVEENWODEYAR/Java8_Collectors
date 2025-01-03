@@ -73,6 +73,17 @@ public class EmployeeRealTimeQueries {
 		Optional<Employee> juniorEmployee = employeeList.stream().filter(e->e.getEmpDepartment().equalsIgnoreCase("Product Development") && e.getEmpGender().equalsIgnoreCase("Male")).collect(Collectors.minBy(Comparator.comparing(Employee::getEmpAge)));
 		System.out.println(juniorEmployee);
 		
+		System.out.println("**##/nSeniormost Employee##**/n");
+		Optional<Employee> seniorEmp = employeeList.stream().collect(Collectors.minBy(Comparator.comparing(Employee::getDOJ)));
+		System.out.println(seniorEmp);
+		
+		System.out.println("**##/nGenderCount in Sales & Markting Team##**/n");
+		Map<String, Long> empGenderCount = employeeList.stream().filter(e->e.getEmpDepartment().equalsIgnoreCase("Sales And Marketing")).collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.counting()));
+		System.out.println(empGenderCount);
+		
+		System.out.println("**##/nAverage Salary of Employees based on gender##**/n");
+		Map<String, Double> avgEmpSal = employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingDouble(Employee::getEmpSalary)));
+		System.out.println(avgEmpSal);
 	}
 }
 
