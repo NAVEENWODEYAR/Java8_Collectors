@@ -2,6 +2,7 @@ package com.collectors.ems;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.DoubleSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -84,6 +85,20 @@ public class EmployeeRealTimeQueries {
 		System.out.println("**##/nAverage Salary of Employees based on gender##**/n");
 		Map<String, Double> avgEmpSal = employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpGender,Collectors.averagingDouble(Employee::getEmpSalary)));
 		System.out.println(avgEmpSal);
+		
+		System.out.println("**##/nEmployes DepartmentWise##**/n");
+		Map<String, List<Employee>> employeesDeptWise = employeeList.stream().collect(Collectors.groupingBy(Employee::getEmpDepartment));
+		System.out.println(employeesDeptWise.entrySet());
+		
+		System.out.println("**##/Average & Total Salary of Organization ##**/n");
+		DoubleSummaryStatistics orgSal = employeeList.stream().collect(Collectors.summarizingDouble(Employee::getEmpSalary));
+		System.out.println("Average Salary: "+orgSal.getAverage());
+		System.out.println("Minimum Salary: "+orgSal.getMin());
+		System.out.println("Maximum Salary: "+orgSal.getMax());
+		System.out.println("Total Salary: "+orgSal.getSum());
+
+
+
 	}
 }
 

@@ -1,9 +1,9 @@
-
 package com.collectors.arrList;
 
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import org.slf4j.*;
 /**
  * @author Naveen K Wodeyar
  * @apiNote find the most repeated element in an array
