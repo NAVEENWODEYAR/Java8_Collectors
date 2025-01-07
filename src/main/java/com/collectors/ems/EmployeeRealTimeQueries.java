@@ -96,9 +96,14 @@ public class EmployeeRealTimeQueries {
 		System.out.println("Minimum Salary: "+orgSal.getMin());
 		System.out.println("Maximum Salary: "+orgSal.getMax());
 		System.out.println("Total Salary: "+orgSal.getSum());
-
-
-
+		
+		System.out.println("**##/Employees by age 25 ##**/n");
+		Map<Boolean, List<Employee>> age25 = employeeList.stream().collect(Collectors.partitioningBy(e->e.getEmpAge()>25));
+		System.out.println(age25.entrySet());
+		
+		System.out.println("**##/ SeniorMost Employee Details ##**/n");
+		Optional<Employee> seniorMostAged = employeeList.stream().collect(Collectors.maxBy(Comparator.comparing(Employee::getEmpAge)));
+		System.out.println(seniorMostAged.get());
 	}
 }
 
