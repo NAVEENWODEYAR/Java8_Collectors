@@ -1,4 +1,3 @@
-
 package com.collectors.hashmap;
 
 import java.util.*;
@@ -7,6 +6,7 @@ import java.util.*;
  * @author Naveen K Wodeyar,
  * @date 11/06/2024,
  */
+
 public class HashMpCls {
 
 	static void hmMethods() {
