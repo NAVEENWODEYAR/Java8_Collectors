@@ -1,5 +1,4 @@
-
-package com.collectors.numbers;
+ package com.collectors.numbers;
 
 import java.util.*;
 /**
