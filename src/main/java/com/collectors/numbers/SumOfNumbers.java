@@ -36,9 +36,9 @@ public class SumOfNumbers {
         String numberStr = scanner.nextLine();
 
         // Calculate the sum of digits using Java 8 Streams
-        int sum = numberStr.chars()                  // Create an IntStream of characters
-                           .map(Character::getNumericValue)  // Convert each character to its numeric value
-                           .sum();                         // Sum all the numeric values
+        int sum = numberStr.chars()                  
+                           .map(Character::getNumericValue)  
+                           .sum();                         
 
         // Output the result
         System.out.println("Sum of the digits: " + sum);
