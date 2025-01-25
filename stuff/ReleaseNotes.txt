@@ -1,0 +1,26 @@
+Project Name: Collectors-Methods-Hands-On
+Start Date:
+Release Date:19-03-2024
+Version:1.0
+
+
+
+Collections are nothing but group of objects stored in well defined manner. 
+Earlier, Arrays are used to represent these group of objects. 
+But, arrays are not re-sizable. size of the arrays are fixed. 
+Size of the arrays can not be changed once they are defined. 
+This causes lots of problem while handling group of objects. 
+To overcome this drawback of arrays, Collection framework or simply collections are introduced in java from JDK 1.2.
+Using collection framework, you can store the objects as a list or as a set or as a queue or as a map and perform operations like adding an object or removing an object or sorting the objects without much hard work.
+
+
+
+The entire collection framework is divided into four interfaces.
+
+1) List  —> It handles sequential list of objects. ArrayList, Vector and LinkedList classes implement this interface.
+
+2) Queue  —> It handles the special group of objects in which elements are removed only from the head. LinkedList and PriorityQueue classes implement this interface.
+
+3) Set  —> It handles the group of objects which must contain only unique elements. This interface is implemented by HashSet and LinkedHashSet classes and extended by SortedSet interface which in turn, is implemented by TreeSet.
+
+4) Map  —> This is the one interface in Collection Framework which is not inherited from Collection interface. It handles the group of objects as Key/Value pairs. It is implemented by HashMap and HashTable classes and extended by SortedMap interface which in turn is implemented by TreeMap.

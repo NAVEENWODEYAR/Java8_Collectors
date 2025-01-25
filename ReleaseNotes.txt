@@ -1,4 +1,0 @@
-Project Name: Collectors-Methods-Hands-On
-Start Date:
-Release Date:19-03-2024
-Version:1.0
