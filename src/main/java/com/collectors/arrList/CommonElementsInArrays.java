@@ -1,4 +1,3 @@
-
 package com.collectors.arrList;
 
 import java.util.*;

@@ -24,7 +24,7 @@ public class RealTimeQueriesJ8CollectorsApplication {
 	
 	@Scheduled(cron = "0 0/5 * * * ?")
 	public void cronMethod() {
-		log.warn("CRON EXPRESSION");
+		log.warn("CRON EXPRESSION {0 0/5 * * * ?}");
 		log.info(LocalDateTime.now().format(DateTimeFormatter.ofPattern("ddMMMyyyy hh:mm a")));
 		log.trace("Executes every 5 minutes");
 	}
