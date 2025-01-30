@@ -1,7 +1,4 @@
-
 package com.collectors.arrList;
-
-import java.util.Arrays;
 
 /**
  * @author Naveen K Wodeyar
@@ -9,6 +6,8 @@ import java.util.Arrays;
  * @apiNote sorting an array
  *
  */
+import java.util.Arrays;
+
 public class SortArray {
 
 	static int[] arr = {1,3,2,6,5,4,9,8};
@@ -28,7 +27,7 @@ public class SortArray {
 			}
 		}
 	System.out.println("####$$$$");	System.out.println(Arrays.toString(sortedArray));
-System.out.println("####$$$$");
+	System.out.println("####$$$$");
 	}
 	
 	public static void main(String[] args) {

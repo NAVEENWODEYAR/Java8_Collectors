@@ -1,13 +1,11 @@
 package com.collectors.arrList;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 /**
  * @author NaveenWodeyar
  *
  */
+import java.util.ArrayList;
+import java.util.List;
 
 public class ArrList {
 
@@ -48,6 +46,17 @@ public class ArrList {
 		System.out.println(arrList.toString());
 		System.out.println("\n####\n");
 		anonymousArray(new String[]{"One","Two","Three","Four"});
+		
+		//addAll(),
+		System.out.println("\n##addAll()\n");
+		ArrayList<Integer> arrayList = new ArrayList<Integer>();
+		ArrayList<Integer> arrayList1 = new ArrayList<Integer>();
+		arrayList.add(1);
+		arrayList.add(2);
+		arrayList1.add(0);
+		arrayList1.addAll(arrayList.size()-1, arrayList);
+		System.out.println("\n"+arrayList+"\n"+arrayList1);
+		
 	}
 
 }
