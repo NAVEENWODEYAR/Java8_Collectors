@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 public class FirstNonRepeating {
 
-	public static char findFirstNonRepeating(String str) {
+    public static char findFirstNonRepeating(String str) {
         HashMap<Character, Integer> frequencyMap = new HashMap<>();
         
         // Count frequency of characters
@@ -23,11 +23,19 @@ public class FirstNonRepeating {
                 return c;
             }
         }
-        return "-1"; // Return -1 if no non-repeating character is found
+        
+        // Return null character (indicating no non-repeating character found)
+        return '\0'; // '\0' is a char and indicates no result
     }
 
     public static void main(String[] args) {
         String str = "geeksforgeeks";
-        System.out.println("First non-repeating character: " + findFirstNonRepeating(str));
+        char result = findFirstNonRepeating(str);
+        
+        if (result != '\0') {
+            System.out.println("First non-repeating character: " + result);
+        } else {
+            System.out.println("No non-repeating character found.");
+        }
     }
 }
