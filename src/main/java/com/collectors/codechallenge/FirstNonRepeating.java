@@ -1,6 +1,9 @@
 package com.collectors.codechallenge;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * @author NaveenWodeyar
@@ -8,34 +11,21 @@ import java.util.HashMap;
  */
 
 public class FirstNonRepeating {
+	public static char firstNonRepeatingCharacter(String str) {
+        Map<Character, Long> charCountMap = str.chars()
+                .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
-    public static char findFirstNonRepeating(String str) {
-        HashMap<Character, Integer> frequencyMap = new HashMap<>();
-        
-        // Count frequency of characters
-        for (char c : str.toCharArray()) {
-            frequencyMap.put(c, frequencyMap.getOrDefault(c, 0) + 1);
-        }
-
-        // Find the first character with frequency 1
-        for (char c : str.toCharArray()) {
-            if (frequencyMap.get(c) == 1) {
-                return c;
-            }
-        }
-        
-        // Return null character (indicating no non-repeating character found)
-        return '\0'; // '\0' is a char and indicates no result
+        return str.chars()
+                .mapToObj(c -> (char) c)
+                .filter(c -> charCountMap.get(c) == 1)
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("No non-repeating character found"));
     }
 
     public static void main(String[] args) {
-        String str = "geeksforgeeks";
-        char result = findFirstNonRepeating(str);
-        
-        if (result != '\0') {
-            System.out.println("First non-repeating character: " + result);
-        } else {
-            System.out.println("No non-repeating character found.");
-        }
+        String input = "swiss";
+        char result = firstNonRepeatingCharacter(input);
+        System.out.println("First non-repeating character: " + result);
     }
 }
