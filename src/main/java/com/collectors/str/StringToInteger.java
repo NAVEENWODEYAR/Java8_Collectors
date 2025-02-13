@@ -29,6 +29,6 @@ public class StringToInteger {
     }
 
     public static void main(String[] args) {
-        System.out.println(myAtoi("42"));  // Output: 42
+        System.out.println(myAtoi("42"));  
     }
 }
