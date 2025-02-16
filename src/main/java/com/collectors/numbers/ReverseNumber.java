@@ -7,6 +7,7 @@ package com.collectors.numbers;
 import java.util.Scanner;
 
 public class ReverseNumber {
+	
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number: ");
@@ -18,7 +19,7 @@ public class ReverseNumber {
             reversed = reversed * 10 + digit;
             num /= 10;
         }
-
         System.out.println("Reversed number: " + reversed);
+        	
     }
 }
