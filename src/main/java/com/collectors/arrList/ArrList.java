@@ -47,8 +47,7 @@ public class ArrList {
 		System.out.println(arrList.toString());
 		System.out.println("\n####\n");
 		anonymousArray(new String[]{"One","Two","Three","Four"});
-		
-		//addAll(),
+	
 		System.out.println("\n##addAll()\n");
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
 		ArrayList<Integer> arrayList1 = new ArrayList<Integer>();
