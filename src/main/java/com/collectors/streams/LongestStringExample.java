@@ -14,7 +14,6 @@ public class LongestStringExample {
 	        
 	        Optional<String> longestWord = words.stream()
 	                                           .max(Comparator.comparingInt(String::length));
-	        
 	        longestWord.ifPresent(word -> System.out.println("Longest word: " + word));
 	    }
 }

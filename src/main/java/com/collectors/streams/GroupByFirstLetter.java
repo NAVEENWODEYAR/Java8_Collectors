@@ -15,7 +15,6 @@ public class GroupByFirstLetter {
         
         Map<Character, List<String>> groupedByFirstLetter = words.stream()
                                                                 .collect(Collectors.groupingBy(word -> word.charAt(0)));
-        
         System.out.println("Grouped by first letter: " + groupedByFirstLetter);
     }
 }
