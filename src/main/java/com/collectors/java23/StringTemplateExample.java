@@ -11,7 +11,9 @@ public class StringTemplateExample {
 	        String name = "Java";
 	        int version = 23;
 
-	        String template = STR."The latest version of {name} is {version}";
-	        System.out.println(template);
+			/*
+			 * String template = STR."The latest version of {name} is {version}";
+			 * System.out.println(template);
+			 */
 	    }
 }
