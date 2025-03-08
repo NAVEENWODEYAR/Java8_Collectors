@@ -1,4 +1,3 @@
-
 package com.collectors.series;
 
 /**
@@ -6,6 +5,7 @@ package com.collectors.series;
  * @date 13/06/2024,
  *
  */
+
 public class FiboSeries {
 
 	static void fibSeries(int n) {
@@ -22,10 +22,8 @@ public class FiboSeries {
 	}
 	
 	public static void main(String[] args) {
-
+		System.out.println("\n The Fibonacci series is a series of elements where, the previous two elements are added to get the next element, starting with 0 and 1,\n");
 		fibSeries(10);
-		
-		
 	}
 
 }
