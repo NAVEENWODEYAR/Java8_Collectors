@@ -24,7 +24,7 @@ public class CallableTaskEx {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         ExecutorService executorService = Executors.newCachedThreadPool();
 
-        Future<Integer> future = executorService.submit(new CallableTaskEx(10));
+        Future<Integer> future = executorService.submit(new CallableTask(10));
 
         System.out.println("Result: " + future.get());
 
