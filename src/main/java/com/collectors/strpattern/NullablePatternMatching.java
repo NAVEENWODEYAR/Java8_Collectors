@@ -1,4 +1,4 @@
-package com.collectors.pattern;
+package com.collectors.strpattern;
 
 /**
  * @author NaveenWodeyar
