@@ -8,8 +8,7 @@ import java.util.stream.*;
  *
  */
 
-
-class LinkedListFlatten {
+public class LinkedListFlatten {
     public static LinkedList<Integer> flatten(List<LinkedList<Integer>> listOfLists) {
         return listOfLists.stream()
                           .flatMap(List::stream) // Flatten the list of lists
