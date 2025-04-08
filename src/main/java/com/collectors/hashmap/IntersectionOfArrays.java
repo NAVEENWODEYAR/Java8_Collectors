@@ -1,6 +1,5 @@
 package com.collectors.hashmap;
 
-
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.List;
