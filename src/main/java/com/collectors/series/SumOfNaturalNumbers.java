@@ -4,6 +4,7 @@ package com.collectors.series;
  * @author NaveenWodeyar
  *
  */
+
 public class SumOfNaturalNumbers {
     public static void main(String[] args) {
         int n = 10; // Limit up to which sum is calculated

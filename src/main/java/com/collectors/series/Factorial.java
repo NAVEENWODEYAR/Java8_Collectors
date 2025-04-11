@@ -1,15 +1,13 @@
-/**
- * 
- */
 package com.collectors.series;
 
 /**
  * @author NaveenWodeyar
  *
  */
+
 public class Factorial {
     public static void main(String[] args) {
-        int n = 5; // Number for which factorial is calculated
+        int n = 5; 
         
         System.out.println("Factorial of " + n + " is: " + factorial(n));
     }
