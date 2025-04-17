@@ -20,6 +20,6 @@ class Appa extends Tata {
 public class StaticOverride {
     public static void main(String[] args) {
         Tata t = new Appa();
-        t.sayHi(); // ?
+        t.sayHi(); 
     }
 }

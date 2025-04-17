@@ -4,6 +4,7 @@ package com.collectors.loops;
  * @author NaveenWodeyar
  *
  */
+
 public class LoopTrick {
     public static void main(String[] args) {
         int i = 0;

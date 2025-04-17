@@ -1,12 +1,10 @@
-/**
- * 
- */
 package com.collectors.str;
 
 /**
  * @author NaveenWodeyar
  *
  */
+
 public class PalindromeWithoutLoop {
 	static String check(String s) {
         long startTime = System.nanoTime();
