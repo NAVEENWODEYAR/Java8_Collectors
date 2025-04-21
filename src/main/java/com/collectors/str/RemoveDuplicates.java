@@ -17,7 +17,7 @@ public class RemoveDuplicates {
             }
         }
 
-        System.out.println(result); // progamin
+        System.out.println(result);
     }
 }
 
