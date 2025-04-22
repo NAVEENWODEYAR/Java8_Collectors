@@ -14,7 +14,7 @@ public class StringFns {
 	static String st = new String("bnml");
 	
 	static void strRev() {
-//		 st.chars().mapToObj(c->(char)c).sorted(Comparator.reverseOrder()).forEach(System.out::print);
+		 st.chars().mapToObj(c->(char)c).sorted(Comparator.reverseOrder()).forEach(System.out::print);
 		 String collect = IntStream.rangeClosed(1, st.length()).mapToObj(c->st.charAt(st.length()-c)).map(Object::toString).collect(Collectors.joining());
 		 System.out.println(collect);
 		 
@@ -42,11 +42,9 @@ public class StringFns {
 		System.out.println(s);
 	}
 	public static void main(String[] args) {
-//		strRev();
+		strRev();
 		System.out.println(vowelCheck(st)?"Vowel present":"Not present");
 		removeSpace();
-		
-		
 	}
 
 }
