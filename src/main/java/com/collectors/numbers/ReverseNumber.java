@@ -1,12 +1,21 @@
 package com.collectors.numbers;
 
+import java.util.Scanner;
+
 /**
  * @author NaveenWodeyar
  *
  */
-import java.util.Scanner;
 
 public class ReverseNumber {
+	
+	static int reverseInt(int num) {
+		String reversed = new StringBuilder(String.valueOf(num))
+                .reverse()
+                .toString();
+		int revNum = Integer.parseInt(reversed);
+		return revNum;
+	}
 	
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
