@@ -1,17 +1,18 @@
 package com.collectors.str;
 
+import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 /**
  * @author NaveenWodeyar
  *
  */
 
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-
 public class RepeatedCharacterCount {
     public static void main(String[] args) {
-        String input = "programming";
+        String input = "Hame tu aponene loota gere mo kaha,\r\n"
+        		+ "dum ta meri kashti be doobi waha jaha pani kam ta";
 
         // Using streams to count occurrences of characters
         Map<Character, Long> charCountMap = input.chars()

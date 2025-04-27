@@ -8,7 +8,8 @@ package com.collectors.str;
 public class ReverseString {
 
 	public static void main(String[] args) {
-        String input = "HelloWorld";
+        String input = "Hame tu aponene loota gere mo kaha,\r\n"
+        		+ "dum ta meri kashti be doobi waha jaha pani kam ta";
         char[] strArray = input.toCharArray();
         int left = 0, right = strArray.length - 1;
 

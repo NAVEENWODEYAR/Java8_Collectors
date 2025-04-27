@@ -10,7 +10,8 @@ import java.util.*;
 public class DistinctCharacters {
 
 	public void distinctChars() {
-	String str1 = "abcdABCDabcd";
+	String str1 = "I was betrayed by my own people — what can I say?\r\n"
+			+ "My boat sank even where the water was shallow";
 
 	char[] chars = str1.toCharArray();
 

@@ -33,7 +33,8 @@ public class ThreadSafeCounter {
         t2.start();
         t1.join();
         t2.join();
-
+        System.out.println("Hame tu aponene loota gere mo kaha,\r\n"
+        		+ "dum ta meri kashti be doobi waha jaha pani kam ta");
         System.out.println("Final count: " + counter.getCount());
     }
 }
