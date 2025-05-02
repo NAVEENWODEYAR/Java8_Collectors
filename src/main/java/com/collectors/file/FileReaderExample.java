@@ -1,15 +1,16 @@
 package com.collectors.file;
 
+import java.io.FileReader;
+import java.io.IOException;
+
 /**
  * @author NaveenWodeyar
  *
  */
-import java.io.FileReader;
-import java.io.IOException;
 
 public class FileReaderExample {
     public static void main(String[] args) {
-        try (FileReader fileReader = new FileReader("input.txt")) {
+        try (FileReader fileReader = new FileReader("git.txt")) {
             int content;
             while ((content = fileReader.read()) != -1) {
                 System.out.print((char) content); // Print character
