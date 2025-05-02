@@ -1,0 +1,52 @@
+git
+- VCS
+- hosting services,gitLab,bitBucket,gitHub,beanStalk, codeBase,perForce,sourceForge,
+  AWS codeCommit,Microsoft Azure Devops 
+
+
+git commands,
+	a. clone : clones remote repo
+	b. add : tracks files and changes in git
+	c. commit : save file in git
+	d. push : update git commits to remoteRepository
+	e. pull : download the changes from the remoteRepository
+	f. remote -v : checking the remote repo's
+	g. git remote rm origin
+	h. git commit -a -m "commit message"
+	i. git revert -m 1 "sha"
+	j. git reset "sha"
+ 	k. git merge branch
+
+branching,
+-git checkout
+-git checkout -b"branchName" (creates new branch)
+-git pull origin master
+-git push origin "new branch"
+-git branch
+-git branch -r
+
+
+Renaming the commit message
+	- git commit --amend -m "New commit message"
+	- git push --force
+
+
+forked repo,
+- git checkout origin main
+- git fetch --all --prune
+- git reset --hard upstream/main
+- git push origin main
+- git pull upstream/main
+
+merge conflicts
+- occur's when two or more persons changing the same file.
+
+How to remove untracked files with git clean,,
+	> git clean -n(dry run)
+	> git clean -f path(force)
+	> git clean -fd(folders)
+	> git clean -fx(ignored files)
+	> git restore --staged .
+	>git restore .
+	>git clean -fd  # if there are untracked files
+Git is a distributed version control system, meaning it keeps track of changes made to files over time, allowing multiple developers to work on the same project simultaneously and safely. It's used primarily in software development to manage source code and collaborative workflows.
