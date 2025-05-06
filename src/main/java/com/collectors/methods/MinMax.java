@@ -1,11 +1,12 @@
-
 package com.collectors.methods;
 
 import java.util.*;
+
 /**
  * @author Naveen K Wodeyar
  * @apiNote Collectors methods,
  */
+
 public class MinMax {
 
 	static void maxLength() {
