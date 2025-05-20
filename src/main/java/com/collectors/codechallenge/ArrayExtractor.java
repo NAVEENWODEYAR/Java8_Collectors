@@ -12,6 +12,7 @@ import java.util.stream.IntStream;
  * @apiNote, 
  *
  */
+
 public class ArrayExtractor {
 
 	static void arraySeperator(int[] arr) {
