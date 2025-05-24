@@ -6,32 +6,18 @@ package com.collectors.loops;
  */
 
 public class LogicalBracketsDemo {
+
+    public static boolean isAllowedEntry(int age, boolean hasID, boolean isVIP, boolean hasInvitation) {
+        // Match logic from Example 4 (best practice)
+        return (age >= 18 && hasID) || (isVIP && hasInvitation);
+    }
+
     public static void main(String[] args) {
-        int age = 25;
-        boolean hasID = true;
-        boolean isVIP = false;
-        boolean hasInvitation = true;
-
-        // Example 1: Without brackets – relies on operator precedence
-        if (age >= 18 && hasID || isVIP)
-            System.out.println("Allowed entry (no brackets)"); // TRUE, but logic may be misleading
-
-        // Example 2: With proper grouping using brackets
-        if ((age >= 18 && hasID) || isVIP)
-            System.out.println("Allowed entry (correct grouping)"); // More explicit and clear
-
-        // Example 3: Change grouping logic
-        if (age >= 18 && (hasID || isVIP))
-            System.out.println("Allowed entry (alternative logic)"); // Different meaning!
-
-        // Example 4: More complex condition
-        if ((age >= 18 && hasID) || (isVIP && hasInvitation)) {
-            System.out.println("Allowed due to age & ID OR VIP & invitation");
+        boolean allowed = isAllowedEntry(25, true, false, true);
+        if (allowed) {
+            System.out.println("Allowed entry");
+        } else {
+            System.out.println("Entry denied");
         }
-
-        // Example 5: Dangerous example – without brackets, could misinterpret logic
-        if (age >= 18 && hasID || isVIP && hasInvitation)
-            System.out.println("WARNING: Ambiguous logic without brackets");
     }
 }
-
