@@ -4,6 +4,7 @@ package com.collectors.loops;
  * @author NaveenWodeyar
  *
  */
+
 public class ConditionalReturn {
 
     // Method to check if a number is positive, negative, or zero
