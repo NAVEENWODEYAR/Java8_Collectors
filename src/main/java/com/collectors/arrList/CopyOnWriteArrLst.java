@@ -1,4 +1,3 @@
-
 package com.collectors.arrList;
 
 import java.util.List;
@@ -40,9 +39,5 @@ public class CopyOnWriteArrLst {
 	}
 
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
 
 }
