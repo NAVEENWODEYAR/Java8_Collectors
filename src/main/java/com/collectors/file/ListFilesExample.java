@@ -1,10 +1,11 @@
 package com.collectors.file;
 
+import java.io.File;
+
 /**
  * @author NaveenWodeyar
  *
  */
-import java.io.File;
 
 public class ListFilesExample {
     public static void main(String[] args) {
