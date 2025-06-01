@@ -10,7 +10,8 @@ public class ExceptionTest {
         System.out.println("Result: " + trickyMethod());
     }
 
-    static int trickyMethod() {
+    @SuppressWarnings("finally")
+	static int trickyMethod() {
         try {
             System.out.println("In try block");
             int a = 5 / 0;  
