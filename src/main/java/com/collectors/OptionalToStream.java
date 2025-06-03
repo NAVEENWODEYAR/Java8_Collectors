@@ -1,7 +1,6 @@
 package com.collectors;
 
 import java.util.Optional;
-import java.util.stream.Stream;
 
 /**
  * @author NaveenWodeyar
