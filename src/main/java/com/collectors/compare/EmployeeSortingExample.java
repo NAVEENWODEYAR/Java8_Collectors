@@ -30,7 +30,7 @@ class Employee implements Comparable<Employee> {
 }
 
 //Comparator to sort by Name
-class NameComparator implements Comparator<Employee> {
+class NameComparators implements Comparator<Employee> {
  public int compare(Employee e1, Employee e2) {
      return e1.name.compareTo(e2.name);
  }
@@ -57,7 +57,7 @@ public class EmployeeSortingExample {
      }
 
      System.out.println("\nSorting by Name (using Comparator):");
-     Collections.sort(employees, new NameComparator());  // Custom order by name
+     Collections.sort(employees, new NameComparators());  // Custom order by name
      for (Employee e : employees) {
          System.out.println(e);
      }
