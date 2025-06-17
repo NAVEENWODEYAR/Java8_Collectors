@@ -7,7 +7,6 @@ import java.util.*;
  *
  */
 
-
 public class ConcurrentModificationWithHandling {
     public static void main(String[] args) {
         List<String> list = new ArrayList<>(Arrays.asList("A", "B", "C", "D"));
@@ -21,7 +20,6 @@ public class ConcurrentModificationWithHandling {
         } catch (ConcurrentModificationException e) {
             System.out.println("Caught ConcurrentModificationException: " + e);
         }
-
         System.out.println("Final List: " + list);
     }
 }
