@@ -1,11 +1,11 @@
 package com.collectors.codechallenge;
 
+import java.util.Scanner;
+
 /**
  * @author NaveenWodeyar
  *
  */
-
-import java.util.Scanner;
 
 //Abstract class for Bank
 abstract class Bank {
