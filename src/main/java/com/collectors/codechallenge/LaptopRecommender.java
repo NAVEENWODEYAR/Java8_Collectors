@@ -1,6 +1,7 @@
 package com.collectors.codechallenge;
 
 import java.util.*;
+import java.util.Scanner;
 
 /**
  * @author NaveenWodeyar
