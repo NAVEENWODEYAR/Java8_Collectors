@@ -14,7 +14,7 @@ public class LanguageVersionChecker {
 
         // List of languages and the commands used to get their version information
         String[][] commands = {
-                {"Java", "java", "-version"},
+                {"Java", "javac", "-version"},
                 {"Python", "python", "--version"},
                 {"Python3", "python3", "--version"},
                 {"Node.js", "node", "--version"},
