@@ -14,6 +14,7 @@ public class JavaInterviewQuestions {
 
         List<String> questions = new ArrayList<>();
 
+        System.out.println("**********************************************");
         questions.add("1. Reverse a string without using built-in methods");
         questions.add("2. Check if a number is a palindrome");
         questions.add("3. Find the factorial of a number");
@@ -31,6 +32,7 @@ public class JavaInterviewQuestions {
         questions.add("15. Implement Singleton class");
 
         System.out.println("Most Asked Java Interview Coding Questions:\n");
+        System.out.println("**********************************************");
 
         for (String question : questions) {
             System.out.println(question);
