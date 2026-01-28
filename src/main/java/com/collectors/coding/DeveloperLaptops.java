@@ -17,10 +17,10 @@ public class DeveloperLaptops {
             "HP Victus Gaming Laptop — More affordable, decent performance for dev tasks"
         };
 
-        System.out.println("🏆 Best Laptops for Developers (2026):");
+        System.out.println("Best Laptops for Developers (2026):");
         System.out.println("-------------------------------------");
         for (String laptop : laptops) {
-            System.out.println("• " + laptop);
+            System.out.println("> " + laptop);
         }
         System.out.println("-------------------------------------");
         System.out.println("Tip: Consider at least 16GB RAM, SSD storage, and a modern CPU for smooth development experience!");
