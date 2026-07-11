@@ -11,6 +11,8 @@ import java.util.Map;
 public class MaxValueKey {
     public static void main(String[] args) {
         HashMap<String, Integer> map = new HashMap<>();
+
+System.out println("Max value in HashMap");
         map.put("John", 30);
         map.put("Alice", 25);
         map.put("Bob", 35);
