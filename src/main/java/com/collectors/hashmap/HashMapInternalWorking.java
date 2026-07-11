@@ -86,6 +86,7 @@ public class HashMapInternalWorking {
     public static void main(String[] args) {
         CustomHashMap<String, String> map = new CustomHashMap<>();
 
+System.out.println("HashMap Internal Working");
         map.put("USA", "Washington D.C.");
         map.put("India", "New Delhi");
         map.put("Germany", "Berlin");
