@@ -16,6 +16,7 @@ public class HashMapExample {
         //Defining the HashMap
         HashMap<String, Double> map = new HashMap<String, Double>();
          
+System.out.println("HashMap Demo");
         //Adding some elements to HashMap
         map.put("Ashwin", 87.55); 
         map.put("Bharat", 95.65);
