@@ -12,6 +12,7 @@ public class AgePredictor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+System.out.println("Age predictor Java program");
         // Get user input
         System.out.println("Enter your height in cm:");
         double height = scanner.nextDouble();
