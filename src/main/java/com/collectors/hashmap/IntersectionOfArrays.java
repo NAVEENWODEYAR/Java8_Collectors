@@ -33,7 +33,7 @@ public class IntersectionOfArrays {
     public static void main(String[] args) {
         int[] arr1 = {4, 9, 5};
         int[] arr2 = {9, 4, 9, 8, 4};
-        System.out.println("Intersection: " + findIntersection(arr1, arr2));
+        System.out.println("Array Intersection: " + findIntersection(arr1, arr2));
     }
 }
 
