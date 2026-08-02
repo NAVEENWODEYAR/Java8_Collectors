@@ -16,7 +16,7 @@ public class ArrList {
 		try {
 			System.out.println("strArr "+strArr[strArr.length]);
 		} catch (Exception e) {
-			System.out.println("Exception "+e.getLocalizedMessage());
+			System.out.println("Exception occurred while checking array size "+e.getLocalizedMessage());
 		}
 		
 		int a[]={33,3,4,5};//declaration, instantiation and initialization  
