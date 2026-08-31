@@ -13,7 +13,7 @@ public class VirtualThreadExample {
         ExecutorService executorService = Executors.newVirtualThreadPerTaskExecutor();
 
         executorService.submit(() -> {
-            System.out.println("Hello from virtual thread!");
+            System.out.println("Hello, from virtual thread!");
         });
 
         executorService.shutdown();
