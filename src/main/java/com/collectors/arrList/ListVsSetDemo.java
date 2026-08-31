@@ -31,7 +31,7 @@ System.out.println("List vs Set");
         set.add("Orange");
 
         // Output
-        System.out.println("List Output:");
+        System.out.println("\nList Output:");
         System.out.println(list);
 
         System.out.println("\nSet Output:");
