@@ -35,6 +35,7 @@ public class ArrList {
 	}
 	
 	public static void main(String[] args) {
+System.out.println("ArrayList demo");
 		System.out.println("\n Re-sizable array with Default initial capacity 10 & Load Factor 0.75F\n");
 		arrEx();
 		List<String> arrList = new ArrayList<String>(20);
