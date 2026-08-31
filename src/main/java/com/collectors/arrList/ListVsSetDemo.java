@@ -14,6 +14,8 @@ public class ListVsSetDemo {
 
     public static void main(String[] args) {
 
+System.out.println("List vs Set");
+
         // List example (Allows duplicates, maintains insertion order)
         List<String> list = new ArrayList<>();
         list.add("Apple");
