@@ -16,7 +16,7 @@ public class OptionalWithList {
 
     public Optional<String> findName(String name) {
         if (name == null) {
-            throw new IllegalArgumentException("Name to search cannot be null");
+            throw new IllegalArgumentException("Name to search cannot be null/Input name must not be null.");
         }
 
         return names.stream()
