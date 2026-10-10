@@ -47,7 +47,7 @@ System.out.println("ArrayList demo");
 		arrList.add(arrList.size()-1, null);
 		System.out.println(arrList.toString());
 		System.out.println("\n####\n");
-		anonymousArray(new String[]{"One","Two","Three","Four"});
+		anonymousArray(new String[]{"One","Two","Three","Four","Five"});
 	
 		System.out.println("\n##addAll()\n");
 		ArrayList<Integer> arrayList = new ArrayList<Integer>();
@@ -55,6 +55,7 @@ System.out.println("ArrayList demo");
 		arrayList.add(1);
 		arrayList.add(2);
 		arrayList1.add(0);
+  arrayList.add(4);
 		arrayList1.addAll(arrayList.size()-1, arrayList);
 		System.out.println("\n"+arrayList+"\n"+arrayList1);
 		
