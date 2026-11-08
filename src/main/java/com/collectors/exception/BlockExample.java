@@ -18,7 +18,7 @@ public class BlockExample {
  }
 
  {
-     System.out.println("Non-static block executed.");
+     System.out.println("Non-static/instance block executed.");
      instanceCounter = 10;
  }
 
