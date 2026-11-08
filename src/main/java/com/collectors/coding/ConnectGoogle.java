@@ -8,6 +8,8 @@ import java.net.URL;
 
 public class ConnectGoogle {
     public static void main(String[] args) {
+
+System.out.println("HttpURLConnection demo");
         try {
             // Create a URL object
             URL url = new URL("https://www.google.com");
